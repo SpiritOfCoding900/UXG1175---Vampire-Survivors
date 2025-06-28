@@ -101,7 +101,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 202
+  controlID: 182
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -434,7 +434,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Image/Character Art Dialogue
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -444,17 +444,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Image/Character Art Dialogue
+  - Assets
   m_LastFoldersGridSize: 96
-  m_LastProjectPath: C:\Users\User\Documents\UXG1175---Vampire-Survivors\Game System
-    - PlaceHolder
+  m_LastProjectPath: C:\Users\User\Documents\AAAAAAAAAAAAA\Game System - PlaceHolder
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c990000
-    m_LastClickedID: 39196
-    m_ExpandedIDs: 00000000049900000a99000000ca9a3b
+    m_SelectedIDs: 04990000
+    m_LastClickedID: 39172
+    m_ExpandedIDs: 000000000499000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -778,7 +777,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script/SYSTEM/Management Of Dialogues
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -788,17 +787,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Script/SYSTEM/Management Of Dialogues
+  - Assets
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\User\Documents\UXG1175---Vampire-Survivors\Game System
-    - PlaceHolder
+  m_LastProjectPath: C:\Users\User\Documents\AAAAAAAAAAAAA\Game System - PlaceHolder
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 62990000
-    m_LastClickedID: 39266
-    m_ExpandedIDs: 00000000049900001699000060990000629900006499000000ca9a3b
+    m_SelectedIDs: 04990000
+    m_LastClickedID: 39172
+    m_ExpandedIDs: 000000000499000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -855,7 +853,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c08c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1117,8 +1115,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script/SYSTEM/Management Of Dialogues/Dialogue Side Quest/The Usurper
-      (The CrownSlayer)
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1128,18 +1125,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Script/SYSTEM/Management Of Dialogues/Dialogue Side Quest/The Usurper
-    (The CrownSlayer)
+  - Assets
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\User\Documents\UXG1175---Vampire-Survivors\Game System
-    - PlaceHolder
+  m_LastProjectPath: C:\Users\User\Documents\AAAAAAAAAAAAA\Game System - PlaceHolder
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 71}
-    m_SelectedIDs: 5e990000
-    m_LastClickedID: 39262
-    m_ExpandedIDs: 00000000049900000a9900001699000060990000629900006499000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 04990000
+    m_LastClickedID: 39172
+    m_ExpandedIDs: 000000000499000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1316,7 +1311,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1c96ffff1c9bffff
+      m_ExpandedIDs: aa99ffff1c9bffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
