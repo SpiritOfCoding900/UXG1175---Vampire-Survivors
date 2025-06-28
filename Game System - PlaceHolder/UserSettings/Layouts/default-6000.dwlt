@@ -101,7 +101,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 182
+  controlID: 174
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -446,14 +446,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: 96
-  m_LastProjectPath: C:\Users\User\Documents\AAAAAAAAAAAAA\Game System - PlaceHolder
+  m_LastProjectPath: C:\Users\User\Desktop\Github Desktop\UXG1175---Vampire-Survivors\Game
+    System - PlaceHolder
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 04990000
-    m_LastClickedID: 39172
-    m_ExpandedIDs: 000000000499000000ca9a3b
+    m_SelectedIDs: 08990000
+    m_LastClickedID: 39176
+    m_ExpandedIDs: 000000000899000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -789,14 +790,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\User\Documents\AAAAAAAAAAAAA\Game System - PlaceHolder
+  m_LastProjectPath: C:\Users\User\Desktop\Github Desktop\UXG1175---Vampire-Survivors\Game
+    System - PlaceHolder
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 04990000
-    m_LastClickedID: 39172
-    m_ExpandedIDs: 000000000499000000ca9a3b
+    m_SelectedIDs: 08990000
+    m_LastClickedID: 39176
+    m_ExpandedIDs: 000000000899000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1127,14 +1129,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\User\Documents\AAAAAAAAAAAAA\Game System - PlaceHolder
+  m_LastProjectPath: C:\Users\User\Desktop\Github Desktop\UXG1175---Vampire-Survivors\Game
+    System - PlaceHolder
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 04990000
-    m_LastClickedID: 39172
-    m_ExpandedIDs: 000000000499000000ca9a3b
+    m_SelectedIDs: 08990000
+    m_LastClickedID: 39176
+    m_ExpandedIDs: 000000000899000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1311,7 +1314,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aa99ffff1c9bffff
+      m_ExpandedIDs: b499ffff269bffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
