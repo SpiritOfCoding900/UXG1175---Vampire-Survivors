@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9114488650898179537}
   - component: {fileID: 6431698752374891892}
   - component: {fileID: 6490808359227678286}
+  - component: {fileID: 5035661884936558554}
   m_Layer: 5
   m_Name: Level Menu - Chapter 1_ The Journey
   m_TagString: Untagged
@@ -109,12 +110,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeButtonSounds:
-  - button: {fileID: 1947761662120435559}
-    sound: 1
-    useCloseAll: 0
   - button: {fileID: 1077139923607274066}
     sound: 2
     useCloseAll: 0
+--- !u!114 &5035661884936558554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574133938534703434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bf68f7dbf837e4689b84f108404cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnPlay: {fileID: 1947761662120435559}
+  putSceneName: Chapter 1 - Level 1 (The Journey)_Story 1
 --- !u!1 &1462475124194122779
 GameObject:
   m_ObjectHideFlags: 0

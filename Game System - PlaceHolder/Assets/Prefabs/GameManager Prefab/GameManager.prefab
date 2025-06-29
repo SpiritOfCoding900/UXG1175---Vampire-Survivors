@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Audio Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3082175773626924372, guid: 718c35dab37ea3e46876699fb7725d0f, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 6696293711274975972, guid: b484a10106d5f3a40a24068e02efcc85, type: 2}
     - target: {fileID: 4004832737599405504, guid: 718c35dab37ea3e46876699fb7725d0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -177,6 +181,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3494285068103053457}
     m_Modifications:
+    - target: {fileID: 2775825637425273154, guid: f44df870e66830e4fba7cf270330dbca, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 4122330514170288997, guid: 55f0a32f097f96e40b96cf7c06498764, type: 2}
     - target: {fileID: 6237962621988225677, guid: f44df870e66830e4fba7cf270330dbca, type: 3}
       propertyPath: m_Name
       value: BGM Audio Prefab
