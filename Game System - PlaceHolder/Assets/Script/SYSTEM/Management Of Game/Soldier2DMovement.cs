@@ -4,9 +4,9 @@ public class Soldier2DMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
-    private Vector2 moveInput;
+    public Vector2 moveDir;
 
-    public bool isInGroundZone = true;
+    // public bool isInGroundZone = true;
 
     void Start()
     {
@@ -17,20 +17,12 @@ public class Soldier2DMovement : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
-        moveInput = new Vector2(moveX, moveY).normalized;
+        moveDir = new Vector2(moveX, moveY).normalized;
     }
 
     void FixedUpdate()
     {
-        if (isInGroundZone)
-        {
-            rb.linearVelocity = moveInput * moveSpeed;
-        }
-        else
-        {
-            // Stop movement if outside zone
-            rb.linearVelocity = Vector2.down;
-        }
+        rb.linearVelocity = moveDir * moveSpeed;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -38,7 +30,7 @@ public class Soldier2DMovement : MonoBehaviour
         Debug.Log("Entered: " + other.name);
         if (other.CompareTag("GroundTag"))
         {
-            isInGroundZone = true;
+            // isInGroundZone = true;
         }
     }
 
@@ -46,7 +38,7 @@ public class Soldier2DMovement : MonoBehaviour
     {
         if (other.CompareTag("GroundTag"))
         {
-            isInGroundZone = false;
+            // isInGroundZone = false;
         }
     }
 }
