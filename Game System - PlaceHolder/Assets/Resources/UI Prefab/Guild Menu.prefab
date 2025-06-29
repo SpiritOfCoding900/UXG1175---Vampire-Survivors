@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 1068414337613637183}
   - component: {fileID: 1724256235237266347}
   - component: {fileID: 286970652587199703}
+  - component: {fileID: 5287522465588227915}
   m_Layer: 5
   m_Name: Guild Menu
   m_TagString: Untagged
@@ -388,6 +389,35 @@ MonoBehaviour:
   - button: {fileID: 5318191676099989667}
     sound: 2
     useCloseAll: 0
+--- !u!114 &5287522465588227915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692203583319672979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c10725237005499dcfd8bfd2096b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customButtonSounds:
+  - button: {fileID: 861940741763945536}
+    sound: 0
+    uiToOpen: 12
+    useReplace: 0
+  - button: {fileID: 1824345349558582345}
+    sound: 0
+    uiToOpen: 12
+    useReplace: 0
+  - button: {fileID: 85514718777695280}
+    sound: 0
+    uiToOpen: 12
+    useReplace: 0
+  - button: {fileID: 7408603657089606886}
+    sound: 0
+    uiToOpen: 12
+    useReplace: 0
 --- !u!1 &4158854019158517668
 GameObject:
   m_ObjectHideFlags: 0
