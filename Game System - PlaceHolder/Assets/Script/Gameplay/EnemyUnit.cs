@@ -33,7 +33,7 @@ public class EnemyUnit : MonoBehaviour
     {
         GameObject newBullet = Instantiate(enemyStats.bulletPrefabModel, pointOfFire.position, pointOfFire.rotation);
         EnemyBulletBehaviour bulletScript = newBullet.GetComponent <EnemyBulletBehaviour>();
-        bulletScript.Initialize(currentDmg, enemyStats.bulletAttackSpeed, enemyStats.bulletTimer);
+        bulletScript.Initialize(enemyStats, 10f);
     }
     
     
