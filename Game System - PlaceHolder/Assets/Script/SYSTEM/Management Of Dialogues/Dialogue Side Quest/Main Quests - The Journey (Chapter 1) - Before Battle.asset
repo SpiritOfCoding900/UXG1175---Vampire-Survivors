@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28df5474d55ab3f4db721b24dcbe5145, type: 3}
-  m_Name: Main Quests - The Journey (Chapter 1) - Scene 1
+  m_Name: Main Quests - The Journey (Chapter 1) - Before Battle
   m_EditorClassIdentifier: 
-  setName: Chapter 1 - Level 1 (The Journey)_Story 1
+  setName: The Journey (Chapter 1) - Before Battle
   lines:
   - speakerName: Hero
     line: I am the Hero! I will save those people!
