@@ -10,7 +10,7 @@ public class MapController : MonoBehaviour
     Vector3 noTerrainPosition;
     public LayerMask terrainMask;
     public GameObject currentChunk;
-    Soldier2DMovement pm;
+    Player pm;
 
     [Header("Optimization")]
     public List<GameObject> spawnedChunks;
@@ -24,7 +24,7 @@ public class MapController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        pm = FindAnyObjectByType<Soldier2DMovement>();
+        pm = FindAnyObjectByType<Player>();
     }
 
     // Update is called once per frame
