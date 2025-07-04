@@ -36,11 +36,11 @@ public class MapController : MonoBehaviour
 
     void ChunkChunker()
     {
-        if(!currentChunk) return;
+        if (!currentChunk) return;
 
         if (pm.moveDir.x > 0 && pm.moveDir.y == 0) // Right
         {
-            if(!Physics2D.OverlapCircle(currentChunk.transform.Find("Right").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right").position, checkerRadius, terrainMask))
             {
                 noTerrainPosition = currentChunk.transform.Find("Right").position;
                 SpawnChunk();
@@ -122,11 +122,14 @@ public class MapController : MonoBehaviour
 
         foreach (GameObject chunk in spawnedChunks)
         {
-            opDist = Vector3.Distance(player.transform.position, chunk.transform.position);
-            if(opDist > maxOpDist)
-                chunk.SetActive(false);
-            else
-                chunk.SetActive(true);
+            if (player != null)
+            {
+                opDist = Vector3.Distance(player.transform.position, chunk.transform.position);
+                if (opDist > maxOpDist)
+                    chunk.SetActive(false);
+                else
+                    chunk.SetActive(true);
+            }
         }
     }
 }

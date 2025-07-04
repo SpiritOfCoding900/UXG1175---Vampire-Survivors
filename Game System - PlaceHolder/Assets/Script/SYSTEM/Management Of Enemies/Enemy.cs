@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     Transform player;
     public float moveSpeed;
+    private bool isMoving = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +17,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+        if (player != null)
+            isMoving = true;
+        else
+            isMoving = false;
+
+        if (isMoving)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+        }
     }
 }

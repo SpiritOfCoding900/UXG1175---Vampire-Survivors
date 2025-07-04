@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 870
     height: 726
-  m_MinSize: {x: 50, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 52, y: 76}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 374
+  controlID: 136
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 739
     height: 726
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -271,16 +271,16 @@ MonoBehaviour:
     y: 726
     width: 1957
     height: 567
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 101, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 18}
   - {fileID: 15}
   - {fileID: 13}
   - {fileID: 19}
-  m_Selected: 2
-  m_LastSelected: 3
+  m_Selected: 3
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -330,8 +330,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 805
+    x: 8
+    y: 813
     width: 1956
     height: 541
   m_SerializedDataModeController:
@@ -356,7 +356,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script/SYSTEM/Management Of Enemies
+    - Assets/Script/SYSTEM/Management Of Game
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Script/SYSTEM/Management Of Enemies
+  - Assets/Script/SYSTEM/Management Of Game
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\User\Desktop\Github Desktop\UXG1175---Vampire-Survivors\Game
     System - PlaceHolder
@@ -374,9 +374,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca960000
-    m_LastClickedID: 38602
-    m_ExpandedIDs: 000000000e960000c6960000cc96000000ca9a3b
+    m_SelectedIDs: 82980000
+    m_LastClickedID: 39042
+    m_ExpandedIDs: 00000000bc9700006c980000709800007698000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -405,7 +405,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e960000
+    m_ExpandedIDs: 00000000bc970000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -431,9 +431,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 6a980000
+    m_LastClickedInstanceID: 39018
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -584,8 +584,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 805
+    x: 8
+    y: 813
     width: 1956
     height: 541
   m_SerializedDataModeController:
@@ -610,7 +610,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Weapons
+    - Assets/Scenes/Story/Chapter 1 - The Journey
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -618,19 +618,19 @@ MonoBehaviour:
     m_ImportLogFlags: 0
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
-  m_StartGridSize: 96
+  m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Weapons
-  m_LastFoldersGridSize: 96
+  - Assets/Scenes/Story/Chapter 1 - The Journey
+  m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\User\Desktop\Github Desktop\UXG1175---Vampire-Survivors\Game
     System - PlaceHolder
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a69a0000
-    m_LastClickedID: 39590
-    m_ExpandedIDs: 000000000e960000
+    m_SelectedIDs: 76bd0000
+    m_LastClickedID: 48502
+    m_ExpandedIDs: 00000000bc9700006a9800006c9800006e98000074bd000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -659,7 +659,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e960000
+    m_ExpandedIDs: 00000000bc970000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -685,8 +685,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b2910000
-    m_LastClickedInstanceID: 37298
+    m_SelectedInstanceIDs: 6a980000
+    m_LastClickedInstanceID: 39018
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c08c0000b69b0000
     m_RenameOverlay:
@@ -714,7 +714,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 96
+    m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 200
 --- !u!114 &16
@@ -756,9 +756,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 04920000
-      m_LastClickedID: 37380
-      m_ExpandedIDs: eafaffffca910000e4910000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 9a0dfbffc416fbff5a1bfbffe821fbff9e2dfbffc433fbff8c36fbff3a3afbffeeeefbffbafbfbfff633fcffde3bfcff428afdfffe8bfdff6a8ffdff8e8afeffa4d8feff60dafeff7edffeff2ce3feffaeebfeffc6f5feff8efefeffdc06ffff6208ffffc684ffff8a86ffffde87fffff09fffffbaaaffff82abffff92acffff2eadffff34b5ffff70bbffff72bbffff70c9ffff66d1ffffded4ffffa4d5ffff3aedfffff4f0ffff44f1ffffc0f8fffff4ffffff16b30000b2c70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1267,7 +1267,7 @@ MonoBehaviour:
       sizeOverridden: 0
     - dockPosition: 1
       containerId: overlay-container--right
-      displayed: 1
+      displayed: 0
       id: Scene View/Tilemap Focus
       index: 2
       contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
@@ -1348,9 +1348,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 4.7830577, y: 1.8412633, z: -0.12805583}
+    m_Target: {x: 584.9177, y: 616.6533, z: 0.20680389}
     speed: 2
-    m_Value: {x: 4.7830577, y: 1.8412633, z: -0.12805583}
+    m_Value: {x: 584.9177, y: 616.6533, z: 0.20680389}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1400,9 +1400,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.671827
+    m_Target: 900.4611
     speed: 2
-    m_Value: 13.671827
+    m_Value: 900.4611
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1480,7 +1480,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script/SYSTEM/Management Of Weapons/Weapon Behaviours
+    - Assets/Resources/UI Prefab
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Script/SYSTEM/Management Of Weapons/Weapon Behaviours
+  - Assets/Resources/UI Prefab
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\User\Desktop\Github Desktop\UXG1175---Vampire-Survivors\Game
     System - PlaceHolder
@@ -1498,9 +1498,9 @@ MonoBehaviour:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 68b80000
-    m_LastClickedID: 47208
-    m_ExpandedIDs: 000000000e960000
+    m_SelectedIDs: 90990000
+    m_LastClickedID: 39312
+    m_ExpandedIDs: 00000000bc9700006c98000070980000769800008898000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1529,7 +1529,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e960000
+    m_ExpandedIDs: 00000000bc970000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1555,8 +1555,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e227ffff
-    m_LastClickedInstanceID: -55326
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000bc970000
     m_RenameOverlay:

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Player's Current Stats: ")]
+    public float MaxHP = 10;
+    public float HP;
+
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     [HideInInspector]
@@ -21,11 +25,17 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2 (1, 0f);
+        HP = MaxHP;
     }
 
     void Update()
     {
         Inputmanagement();
+    }
+
+    void FixedUpdate()
+    {
+        Move();
     }
 
     void Inputmanagement()
@@ -51,11 +61,6 @@ public class Player : MonoBehaviour
         {
             lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector);
         }
-    }
-
-    void FixedUpdate()
-    {
-        Move();
     }
 
     void Move()

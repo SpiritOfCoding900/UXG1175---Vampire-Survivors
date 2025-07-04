@@ -104,10 +104,16 @@ public enum GameUIID
     StatsMenu,
     HomeMenu,
     BlueScreen,
+    YouWin,
+    YouLose,
     LevelMenuChapter1,
     LevelMenuChapter2,
     LevelMenuChapter3,
-    LevelMenuChapter4,
+    LevelMenuChapter4, 
+    LevelCompleteChapter1,
+    LevelCompleteChapter2,
+    LevelCompleteChapter3,
+    LevelCompleteChapter4,
 }
 
 public enum LevelUIID
