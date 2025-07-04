@@ -3,26 +3,25 @@ using UnityEngine;
 public class EnemyBulletBehaviour : MonoBehaviour
 {
     private EnemyStats enemyStats;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
 
     private void Awake()
     {
-       rb = GetComponent<Rigidbody2D>();
-        if (rb == null)
-        {
-            Debug.LogWarning("Bullet script requires a Rigidbody component on the GameObject to function correctly.");
-        }
-    }
-    public void Initialize (EnemyStats stats, float timer)
-    {
-        this.enemyStats = stats;
-        timer = enemyStats.bulletTimer;
-        Destroy(gameObject, timer);
+       rb = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = transform.up * enemyStats.bulletAttackSpeed;
+        rb.linearVelocity = transform.forward * enemyStats.bulletAttackSpeed;
+    }
+
+    public void Initialize (int dmg, float spd, float timer)
+    {
+        dmg = enemyStats.baseDmg;
+        spd = enemyStats.bulletAttackSpeed;
+        timer = enemyStats.bulletTimer;
+
+        Destroy(enemyStats.bulletPrefabModel, timer);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,12 +30,12 @@ public class EnemyBulletBehaviour : MonoBehaviour
         {
             // TODO: Create and call player script
          
-            Destroy (gameObject);
+            Destroy (enemyStats.bulletPrefabModel);
         }
 
         else
         {
-            Destroy(gameObject);
+            Destroy(enemyStats.bulletPrefabModel);
         }
     }
 }
