@@ -19,7 +19,6 @@ public class EnemyBulletBehaviour : MonoBehaviour
         timer = enemyStats.bulletTimer;
         Destroy(gameObject, timer);
     }
-    //
 
     private void FixedUpdate()
     {
