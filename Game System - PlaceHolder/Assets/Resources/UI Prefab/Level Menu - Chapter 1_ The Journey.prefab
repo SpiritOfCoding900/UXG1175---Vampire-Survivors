@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f6b155e6a33ca49ad671501848a738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 12
+  ID: 14
   ShowCursor: 1
   CursorLockMode: 0
 --- !u!114 &6490808359227678286
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnPlay: {fileID: 1947761662120435559}
-  putSceneName: Chapter 1 - Level 1 (The Journey)_Story 1
+  putSceneName: Chapter 1 - Level 1 (The Journey)_Before Battle
 --- !u!1 &1462475124194122779
 GameObject:
   m_ObjectHideFlags: 0
