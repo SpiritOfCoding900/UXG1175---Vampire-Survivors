@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
   baseHP: 5
   baseDmg: 1
-  baseAttackSpeed: 1
+  baseAttackSpeed: 2
   bulletPrefabModel: {fileID: 2986644475702283429, guid: cc18e6799039747428c5b41833861edd, type: 3}
-  bulletAttackSpeed: 1
+  bulletAttackSpeed: 2
   bulletTimer: 2
