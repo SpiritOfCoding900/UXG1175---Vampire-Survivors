@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: ffca73d0aaa12304daabeb71e3986615, type: 3}
   m_Name: EnemyStats
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
   baseHP: 5
   baseDmg: 1
   baseAttackSpeed: 1
   bulletPrefabModel: {fileID: 2986644475702283429, guid: cc18e6799039747428c5b41833861edd, type: 3}
-  bulletAttackSpeed: 1
-  bulletTimer: 2
+  bulletAttackSpeed: 10
+  bulletTimer: 3
