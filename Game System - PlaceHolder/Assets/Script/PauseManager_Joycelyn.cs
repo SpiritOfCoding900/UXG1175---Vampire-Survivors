@@ -4,14 +4,13 @@ using UnityEngine.SceneManagement;
 public class PauseManager_Joycelyn : MonoBehaviour
 {
     public GameObject pauseScreen;
-    //this is for the other scripts to check if its pause
     bool isPaused = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //set the pause screen to not be active
+        //(pause screen is not there)
         pauseScreen.SetActive(false);
         Time.timeScale = 1f;
     }
@@ -19,40 +18,40 @@ public class PauseManager_Joycelyn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //EXECUTION
         Pause();
     }
 
     public void Pause()
     {
-        //check if the pause key is pressed
+        //Summon me now (check if the pause key is pressed)
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = true;
             pauseScreen.SetActive(true);
-            //pause everything
+            //tick tock (it pauses everything)
             Time.timeScale = 0f;
         }
     }
 
     public void Resume()
     {
-        //continue the game
         pauseScreen.SetActive(false);
         Time.timeScale = 1f;
-
+        //time dosen't stop
         isPaused = false;
 
     }
 
     public void restart()
     {
-        //there is no restart only proceed 
+        //there is no restart only proceed (it resets the current scene)
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Menu()
     {
-        //go back to the main menu / level selector (idk yet)
-        ///will be empty for now
+        //cant't go back to how we used to be (goes back to the title screen)
+        SceneManager.LoadScene("Main Menu");
     }
 }
