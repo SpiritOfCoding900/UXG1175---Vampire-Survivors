@@ -1,38 +1,19 @@
 using UnityEngine;
 
-public class EnemyStats : MonoBehaviour
+[CreateAssetMenu(fileName = "EnemyStats", menuName = "Scriptable Objects/EnemyStats")]
+public class EnemyStats : ScriptableObject
 {
+    // Properties of the enemy 
+    // Controls: Enemy hp, dmg and attack speed. 
 
-    [SerializeField] private int minHp = 1;
-    [SerializeField] private int maxHp = 5;
-    [SerializeField] private int currentHP;
+    public int baseHP = 5;
+    public int baseDmg = 1;
+    public float baseAttackSpeed = 2f;
 
-    [SerializeField] private int baseDmg = 1;
-    [SerializeField] private int maxDmg = 5;
-    [SerializeField] private int currentDmg;
+    // Properties of the bullet that the enemy will shoot. 
+    // Controls: Bullet spawn and despawn, bullet travel speed. 
 
-    [SerializeField] private float baseAttackSpeed = 1;
-    [SerializeField] private float maxAttackSpeed = 10;
-    [SerializeField] private float currentAttackSpeed;
-
-    void Awake()
-    {
-        currentHP = 3;
-        currentDmg = baseDmg;
-        currentAttackSpeed = baseAttackSpeed;
-
-        Debug.Log(string.Format("Game Start. Base Enemy HP = {0}" , currentHP));
-        Debug.Log(string.Format("Game Start. Base Enemy DMG = {0}", currentDmg));
-        Debug.Log(string.Format("Game Start. Base Enemy Attack Speed = {0}", currentAttackSpeed));
-
-    }
-
-    // Set values that can be retrieved and altered by other scripts (Levelling system). 
-   //public int Damage = currentDmg;
-   //public int AttackSpeed = currentAttackSpeed;
-
-    private void Die()
-    {
-        Destroy(gameObject);
-    }
+    public GameObject bulletPrefabModel;
+    public float bulletAttackSpeed = 2f;
+    public float bulletTimer = 2f;
 }
