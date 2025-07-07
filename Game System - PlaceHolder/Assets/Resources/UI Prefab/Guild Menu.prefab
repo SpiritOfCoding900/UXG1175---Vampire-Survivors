@@ -404,19 +404,19 @@ MonoBehaviour:
   customButtonSounds:
   - button: {fileID: 861940741763945536}
     sound: 0
-    uiToOpen: 12
+    uiToOpen: 14
     useReplace: 0
   - button: {fileID: 1824345349558582345}
     sound: 0
-    uiToOpen: 13
+    uiToOpen: 15
     useReplace: 0
   - button: {fileID: 85514718777695280}
     sound: 0
-    uiToOpen: 14
+    uiToOpen: 16
     useReplace: 0
   - button: {fileID: 7408603657089606886}
     sound: 0
-    uiToOpen: 15
+    uiToOpen: 17
     useReplace: 0
 --- !u!1 &4158854019158517668
 GameObject:
