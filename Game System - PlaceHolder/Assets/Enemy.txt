@@ -1,0 +1,35 @@
+{
+"enemyClasses": 
+	[
+		{
+		"name": "MeleeEnemy",
+		"health": 10,
+		"damageDealt" : 1,
+		"movementSpeed": 100,	
+		"firerate": 0,
+		"weaponSwingSpeed" : 10,
+		"enemyPattern": "Chase"
+		},
+
+		{
+		"name": "RangedEnemyQuickFire",
+		"health": 10,
+		"damageDealt" : 1,
+		"movementSpeed": 100,
+		"firerate" : 10,
+		"weaponSwingSpeed": 0,
+		"enemyPattern": "Patrol"
+		},
+
+
+		{
+		"name": "RangedEnemySlowFire",
+		"health": 10,
+		"damageDealt" : 2,
+		"movementSpeed": 50,
+		"firerate" : 5,
+		"weaponSwingSpeed": 0,
+		"enemyPattern": "Look"
+		}
+	]
+}
