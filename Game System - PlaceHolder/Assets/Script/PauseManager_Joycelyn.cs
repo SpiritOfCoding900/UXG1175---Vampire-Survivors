@@ -53,6 +53,6 @@ public class PauseManager_Joycelyn : MonoBehaviour
     public void Menu()
     {
         //cant't go back to how we used to be (goes back to the title screen)
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(0); //(this loads the 0 buildindex from the build profiles)
     }
 }
