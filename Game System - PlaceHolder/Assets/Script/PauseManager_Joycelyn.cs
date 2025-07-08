@@ -10,8 +10,7 @@ public class PauseManager_Joycelyn : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //(pause screen is not there)
-        pauseScreen.SetActive(false);
+        //(prob dun need when merge with the gamemanager script)
         Time.timeScale = 1f;
     }
 
@@ -29,6 +28,7 @@ public class PauseManager_Joycelyn : MonoBehaviour
         {
             isPaused = true;
             pauseScreen.SetActive(true);
+
             //tick tock (it pauses everything)
             Time.timeScale = 0f;
         }
@@ -36,10 +36,11 @@ public class PauseManager_Joycelyn : MonoBehaviour
 
     public void Resume()
     {
-        pauseScreen.SetActive(false);
-        Time.timeScale = 1f;
         //time dosen't stop
         isPaused = false;
+
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1f;
 
     }
 
