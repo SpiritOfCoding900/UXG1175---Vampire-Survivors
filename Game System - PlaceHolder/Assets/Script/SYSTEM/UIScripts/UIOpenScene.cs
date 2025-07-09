@@ -24,6 +24,5 @@ public class UIOpenScene : MonoBehaviour
         {
             SceneManager.LoadScene(putSceneName);
         }
-        
     }
 }
