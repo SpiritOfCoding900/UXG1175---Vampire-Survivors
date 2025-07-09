@@ -9,35 +9,49 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     [Header("Weapon Stats")]
-    public WeaponScriptableObject weaponData;
-    //public GameObject prefab;
-    //public float damage;
-    //public float speed;
-    //public float cooldownDuration;
-    float currentCooldown;
-    //public int pierce;
+    public List<WeaponScriptableObject> weaponDataList = new List<WeaponScriptableObject>();
+    private List<float> currentCooldowns = new List<float>();
 
     protected Player pm;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
         pm = FindObjectOfType<Player>();
-        currentCooldown = weaponData.CoolDownDuration;
-    }
 
-    // Update is called once per frame
-    protected virtual void Update()
-    {
-        currentCooldown -= Time.deltaTime;
-        if(currentCooldown <= 0f)
+        // Initialize cooldown list
+        foreach (var weapon in weaponDataList)
         {
-            Attack();
+            currentCooldowns.Add(weapon.CoolDownDuration);
         }
     }
 
-    protected virtual void Attack()
+    protected virtual void Update()
     {
-        currentCooldown = weaponData.CoolDownDuration;
+        for (int i = 0; i < weaponDataList.Count; i++)
+        {
+            currentCooldowns[i] -= Time.deltaTime;
+
+            if (currentCooldowns[i] <= 0f)
+            {
+                Attack(weaponDataList[i]);
+                currentCooldowns[i] = weaponDataList[i].CoolDownDuration;
+            }
+        }
+    }
+
+    protected virtual void Attack(WeaponScriptableObject weaponData)
+    {
+        GameObject weaponObj = Instantiate(weaponData.Prefab, transform.position, Quaternion.identity);
+        weaponObj.transform.parent = transform;
+
+        // Optional: apply knife direction if it's a knife
+        var knife = weaponObj.GetComponent<KnifeBehaviour>();
+        if (knife != null && pm != null)
+        {
+            knife.DirectionChecker(pm.lastMovedVector);
+        }
+
+        // GarlicBehaviour does not need Initialize, it's auto-handled by Start()
+        // So no need to do anything special here
     }
 }

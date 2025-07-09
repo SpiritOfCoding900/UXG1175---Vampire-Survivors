@@ -1078,7 +1078,6 @@ Transform:
   - {fileID: 1369843239}
   - {fileID: 1270986185}
   - {fileID: 1842903544}
-  - {fileID: 1306939055}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &858004072
@@ -1519,51 +1518,6 @@ Canvas:
   m_SortingLayerID: 1220015289
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1306939054
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1306939055}
-  - component: {fileID: 1306939056}
-  m_Layer: 0
-  m_Name: Garlic Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1306939055
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306939054}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 827663321}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1306939056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306939054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62e26dec7d9723d4696b83c2271ad138, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: dfd4363d379278a438d8029d448a3978, type: 2}
 --- !u!1 &1369843238
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,7 +2014,7 @@ GameObject:
   - component: {fileID: 1842903544}
   - component: {fileID: 1842903545}
   m_Layer: 0
-  m_Name: Knife Controller
+  m_Name: Weapon Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2090,10 +2044,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1842903543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77f3a959e8990d14abe786716e4f275c, type: 3}
+  m_Script: {fileID: 11500000, guid: 27874e9a2cbfdfe4db68b72a105e901e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 7218dca2baefa73469665a1b92ac3b30, type: 2}
+  weaponDataList:
+  - {fileID: 11400000, guid: dfd4363d379278a438d8029d448a3978, type: 2}
+  - {fileID: 11400000, guid: 22a8d09b4ffc703418f17e9cdf353d6b, type: 2}
+  - {fileID: 11400000, guid: a4c400ee25adac147be70a75b09cc59b, type: 2}
+  - {fileID: 11400000, guid: 7218dca2baefa73469665a1b92ac3b30, type: 2}
+  - {fileID: 11400000, guid: d6fe91696b235c54880a5b41a849c7ac, type: 2}
+  - {fileID: 11400000, guid: 374ded9409dcc09418e2ee173ca7c414, type: 2}
 --- !u!1 &1870898286
 GameObject:
   m_ObjectHideFlags: 0
