@@ -8,7 +8,9 @@
 		"movementSpeed": 100,	
 		"firerate": 0,
 		"weaponSwingSpeed" : 10,
-		"enemyPattern": "Chase"
+		"enemyPattern": "Chase",
+		"bulletSize": 0.0,
+		"bulletSpeed": 0.0
 		},
 
 		{
@@ -16,9 +18,11 @@
 		"health": 10,
 		"damageDealt" : 1,
 		"movementSpeed": 100,
-		"firerate" : 10,
+		"firerate" : 3,
 		"weaponSwingSpeed": 0,
-		"enemyPattern": "Patrol"
+		"enemyPattern": "Patrol",
+		"bulletSize": 0.5,
+		"bulletSpeed": 3.0
 		},
 
 
@@ -27,9 +31,11 @@
 		"health": 10,
 		"damageDealt" : 2,
 		"movementSpeed": 50,
-		"firerate" : 5,
+		"firerate" : 0.5,
 		"weaponSwingSpeed": 0,
-		"enemyPattern": "Look"
+		"enemyPattern": "Look",
+		"bulletSize": 2.0,
+		"bulletSpeed": 1.0
 		}
 	]
 }

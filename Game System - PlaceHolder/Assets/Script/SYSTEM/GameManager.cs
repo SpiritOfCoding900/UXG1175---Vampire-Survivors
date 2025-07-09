@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : SimpleSingleton<GameManager>
 {
-    private PlayerStats _playerStats;
+
     //private EnemyStats _enemyStats;
 
     [Header("Player Data: ")]

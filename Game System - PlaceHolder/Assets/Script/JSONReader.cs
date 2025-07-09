@@ -13,9 +13,11 @@ public class JSONReader : MonoBehaviour
         public int health;
         public int damageDealt;
         public int movementSpeed;
-        public int firerate;
+        public float firerate;
         public int weaponSwingSpeed;
         public string enemyPattern;
+        public float bulletSize;
+        public float bulletSpeed;
     }
 
     [System.Serializable]

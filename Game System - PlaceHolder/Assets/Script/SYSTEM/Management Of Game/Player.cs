@@ -67,4 +67,13 @@ public class Player : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
     }
+
+    public void TakeDamage (int amount)
+    {
+        HP -= amount;
+        if (HP <= 0)
+        {
+            Debug.Log("You're dead");
+        }
+    }
 }
