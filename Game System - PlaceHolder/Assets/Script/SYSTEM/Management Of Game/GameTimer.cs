@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameTimer : SimpleSingleton<GameTimer>
+public class GameTimer : SimpleSingleton<GameTimer>, ISceneTargetProvider
 {
     public TMP_Text timerText; // Assign this in the Inspector
     public GameUIID openUIForWinning = GameUIID.YouWin;
@@ -44,6 +44,11 @@ public class GameTimer : SimpleSingleton<GameTimer>
                 // DisplayTime(0);
             }
         }
+    }
+
+    public string GetSceneName()
+    {
+        return sceneAfterWinning;
     }
 
     void DisplayTime(float timeToDisplay)

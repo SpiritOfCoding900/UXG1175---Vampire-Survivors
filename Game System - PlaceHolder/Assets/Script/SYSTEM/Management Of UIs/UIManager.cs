@@ -114,6 +114,8 @@ public enum GameUIID
     LevelCompleteChapter2,
     LevelCompleteChapter3,
     LevelCompleteChapter4,
+    Tutorial,
+    TutorialScreen,
 }
 
 public enum LevelUIID
