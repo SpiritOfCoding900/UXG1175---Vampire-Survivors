@@ -52,8 +52,12 @@ public class UIPlayerSelection : MonoBehaviour
                 ui.hpText.text = data.MaxHP.ToString();
                 ui.speedText.text = data.moveSpeed.ToString();
                 ui.descriptionText.text = data.description;
+
+                
             }
         }
+
+        
     }
 
     public void ChosenWarriorClass() => ChooseClass(0);
@@ -63,6 +67,11 @@ public class UIPlayerSelection : MonoBehaviour
     private void ChooseClass(int index)
     {
         Time.timeScale = 1f;
+
+        var data02 = CharacterLoader.Instance.myClassList.classes[index];
+        Player.Instance.MaxHP = data02.MaxHP;
+        Player.Instance.moveSpeed = data02.moveSpeed;
+
         UIManager.Instance.CloseAll();
         // Do something with index, like pass it to GameManager or store selected class
     }

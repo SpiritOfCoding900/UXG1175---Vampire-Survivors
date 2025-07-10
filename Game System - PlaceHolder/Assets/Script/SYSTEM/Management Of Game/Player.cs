@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : SimpleSingleton<Player>
 {
     [Header("Player's Current Stats: ")]
     public string className;
