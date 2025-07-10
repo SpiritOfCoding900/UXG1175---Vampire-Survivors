@@ -2,40 +2,30 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;           // The player or object to follow
-    public Vector3 offset;
-    //public float smoothSpeed = 0.125f; // Smooth camera movement
-    //public float minX = -20f;                 // Left boundary
-    //public float maxX = 20f;                 // Right boundary
-    //public float minY = -20f;                 // Up boundary
-    //public float maxY = 20f;                 // Down boundary
+    public Transform target;
+    public float lerpSpeed;
 
+    private Vector3 offset;
 
-    void Start()
+    private Vector3 targetPos;
+
+    private void Start()
     {
-
+        findPlayerTarget(GameManager.Instance.CurrentPlayer.transform);
+        offset = transform.position - target.position;
     }
 
-    void Update()
+    public void findPlayerTarget(Transform playerLocation)
     {
-        
+        target = playerLocation;
     }
 
-    void LateUpdate()
+    private void Update()
     {
         if (target == null) return;
-        
+
+        //targetPos = transform.position = target.position + offset;
+        //transform.position = Vector3.Lerp(transform.position, targetPos, lerpSpeed * Time.deltaTime);
         transform.position = target.position + offset;
-
-        //// Clamp target position within bounds
-        //float targetX = Mathf.Clamp(target.position.x, minX, maxX);
-        //float targetY = Mathf.Clamp(target.position.y, minY, maxY);
-
-        //// Desired position includes both X and Y clamping
-        //Vector3 desiredPosition = new Vector3(targetX, targetY, transform.position.z);
-
-        //// Smooth camera movement
-        //Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-        //transform.position = smoothedPosition + offset;
     }
 }

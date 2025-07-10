@@ -5,10 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Player's Current Stats: ")]
+    public string className;
+
     public float MaxHP = 10;
     public float HP;
 
     public float moveSpeed = 5f;
+    public string description;
     private Rigidbody2D rb;
     [HideInInspector]
     public float lastHorizontalVector;

@@ -41,6 +41,7 @@ public class GameTimer : SimpleSingleton<GameTimer>, ISceneTargetProvider
                 timeRemaining = 0;
                 timerIsRunning = false;
                 UIManager.Instance.OpenReplace(openUIForWinning);
+                DestroyAllEnemies();
                 // DisplayTime(0);
             }
         }
@@ -59,5 +60,14 @@ public class GameTimer : SimpleSingleton<GameTimer>, ISceneTargetProvider
         int seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    void DestroyAllEnemies()
+    {
+        Enemy[] allEnemies = FindObjectsOfType<Enemy>();
+        foreach (Enemy enemy in allEnemies)
+        {
+            Destroy(enemy.gameObject);
+        }
     }
 }

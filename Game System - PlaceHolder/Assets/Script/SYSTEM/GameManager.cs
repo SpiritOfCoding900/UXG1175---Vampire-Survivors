@@ -8,6 +8,7 @@ public class GameManager : SimpleSingleton<GameManager>
     [Header("Player Data: ")]
     [SerializeField]
     private Player player01;
+    public Player CurrentPlayer { private set; get; }
 
     [Header("Player's Current Stats: ")]
     public float currentHealth;
@@ -24,16 +25,16 @@ public class GameManager : SimpleSingleton<GameManager>
 
     }
 
-    //public void spawnPlayerOnce(Vector3 PlayersNewSpawnPosition)
-    //{
-    //    // Spawn the player once when entering a Level.
+    public void spawnPlayerOnce(Vector3 PlayersNewSpawnPosition)
+    {
+        // Spawn the player once when entering a Level.
 
-    //    Vector3 playerPos = PlayersNewSpawnPosition;
+        Vector3 playerPos = PlayersNewSpawnPosition;
 
-    //    var obj = Instantiate(player01, playerPos, Quaternion.identity);
-    //    if (obj.TryGetComponent(out Player player))
-    //    {
-    //        CurrentPlayer = player;
-    //    }
-    //}
+        var obj = Instantiate(player01, playerPos, Quaternion.identity);
+        if (obj.TryGetComponent(out Player player))
+        {
+            CurrentPlayer = player;
+        }
+    }
 }

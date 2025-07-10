@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player != null)
+        if (player != null || UIManager.Instance.OpenReplace(GameUIID.YouWin) != null)
             isMoving = true;
         else
             isMoving = false;
