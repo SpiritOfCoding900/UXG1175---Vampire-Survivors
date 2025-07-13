@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 ///  Base script for all weapon controller
 /// </summary>
-public class WeaponController : MonoBehaviour
+public class WeaponController : SimpleSingleton<WeaponController>
 {
     [Header("Weapon Stats")]
     public List<WeaponScriptableObject> weaponDataList = new List<WeaponScriptableObject>();
@@ -37,6 +37,19 @@ public class WeaponController : MonoBehaviour
                 currentCooldowns[i] = weaponDataList[i].CoolDownDuration;
             }
         }
+    }
+
+    public bool AddWeapon(WeaponScriptableObject newWeapon)
+    {
+        if (weaponDataList.Contains(newWeapon))
+        {
+            Debug.LogWarning($"Weapon {newWeapon.name} is already in the list!");
+            return false;
+        }
+
+        weaponDataList.Add(newWeapon);
+        currentCooldowns.Add(newWeapon.CoolDownDuration);
+        return true;
     }
 
     protected virtual void Attack(WeaponScriptableObject weaponData)

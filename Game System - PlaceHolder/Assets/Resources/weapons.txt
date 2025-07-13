@@ -1,0 +1,25 @@
+{
+  "weapons": [
+    {
+      "weaponName": "Iron Dagger",
+      "damage": 12,
+      "range": 1.5,
+      "coolDownDuration": 1.0,
+      "description": "A light but quick blade used by rogues."
+    },
+    {
+      "weaponName": "Fire Wand",
+      "damage": 25,
+      "range": 6.0,
+      "coolDownDuration": 2.5,
+      "description": "Casts a flaming projectile with medium cooldown."
+    },
+    {
+      "weaponName": "Thunder Axe",
+      "damage": 35,
+      "range": 2.0,
+      "coolDownDuration": 3.0,
+      "description": "A heavy axe that releases electric shock on impact."
+    }
+  ]
+}

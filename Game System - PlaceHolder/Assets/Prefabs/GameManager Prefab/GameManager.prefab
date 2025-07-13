@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5337648911101722060}
   - component: {fileID: 967519245331776604}
   - component: {fileID: -7697642453393746725}
+  - component: {fileID: 3445917890506453199}
+  - component: {fileID: 270899907118722986}
   - component: {fileID: 4816475594746648858}
   m_Layer: 0
   m_Name: GameManager
@@ -107,6 +109,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myClassList:
     classes: []
+--- !u!114 &3445917890506453199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856941512115400321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e87c81981e74479b6ad3b85463cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myWeaponList:
+    weapons: []
+--- !u!114 &270899907118722986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856941512115400321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc2a3eb5000ed6478cc4fe3fe2f771a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySkillList:
+    skills: []
 --- !u!114 &4816475594746648858
 MonoBehaviour:
   m_ObjectHideFlags: 0
