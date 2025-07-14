@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 6613064789560895169}
   - component: {fileID: 4316786432004814388}
   - component: {fileID: 1399334462983081541}
+  - component: {fileID: 3030635135123748521}
   m_Layer: 0
   m_Name: LV {Canvas}
   m_TagString: Untagged
@@ -470,6 +471,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3030635135123748521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2480487008103649635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a94b3078c777394fb710429051c402c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expImage: {fileID: 4812961318707606578}
 --- !u!1 &3097087716254578834
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,11 +912,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 060915a5d4f8afa4d9e6cebb3ee9670d, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1032,6 +1046,7 @@ GameObject:
   - component: {fileID: 987795433759251862}
   - component: {fileID: 5466592456681498655}
   - component: {fileID: 8039817354549235328}
+  - component: {fileID: 7196827977801385363}
   m_Layer: 0
   m_Name: LV_Text
   m_TagString: Untagged
@@ -1157,6 +1172,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7196827977801385363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6307284062989098755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44070b32db0739e46a38210ff57f8e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6381083442007570400
 GameObject:
   m_ObjectHideFlags: 0

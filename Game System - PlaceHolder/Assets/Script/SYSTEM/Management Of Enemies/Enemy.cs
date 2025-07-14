@@ -28,14 +28,26 @@ public class Enemy : MonoBehaviour, IDamagable
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
         }
 
-        if (HP <= 0)
-        {
-            Destroy(gameObject);
-        }
+        EnemyDead();
     }
 
     public void TakeDamage(float damage)
     {
         HP -= damage;
+    }
+
+    public void EnemyDead()
+    {
+        if (HP <= 0)
+        {
+            // Give Exp
+            float expValueWhenDead = 2f;
+            PlayerLevelUpStats.Instance.SetExperience(expValueWhenDead);
+
+            // Death
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
+            Destroy(gameObject, 1.5f);
+        }
     }
 }
