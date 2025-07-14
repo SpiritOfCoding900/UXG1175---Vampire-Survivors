@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GarlicBehaviour : MeleeWeaponBehaviour
+public class GarlicBehaviour : MeleeWeaponBehaviour /*, IDamagable*/
 {
     List<GameObject> markedEnemies;
 
@@ -17,8 +17,8 @@ public class GarlicBehaviour : MeleeWeaponBehaviour
     {
         if (col.CompareTag("Enemy") && !markedEnemies.Contains(col.gameObject))
         {
-            //EnemyStats enemy = col.GetComponent<EnemyStats>();
-            //enemy.TakeDamage(currentDamage);
+            IDamagable enemy = col.GetComponent<IDamagable>();
+            enemy.TakeDamage(weaponData.Damage);
             markedEnemies.Add(col.gameObject); // Mark the enemy so it dosen't take another instance of damage from this garlic
         }
     }

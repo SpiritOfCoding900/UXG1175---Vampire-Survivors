@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65456beb5c9401a40aa59c907d5cb148, type: 3}
   m_Name: Melee 1_Garlic Weapon
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
   prefab: {fileID: 2377416536511792137, guid: 5f5474d5072b7c64ab4942f20727efa3, type: 3}
   damage: 5
   speed: 0
