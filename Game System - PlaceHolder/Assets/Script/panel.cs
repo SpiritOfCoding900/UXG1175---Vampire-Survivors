@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class panel : MonoBehaviour
 {
@@ -7,5 +8,13 @@ public class panel : MonoBehaviour
     public void HideScreen()
     {
         pauseScreen.ResumeAnimationEnd();
+    }
+    public void RestartTransit()
+    {
+        pauseScreen.RestartEnd();
+    }
+    public void MenuTransit()
+    {
+        pauseScreen.MenuEnd();
     }
 }

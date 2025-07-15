@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseManager_Joycelyn : MonoBehaviour
 {
+    public Image blackOverlay;
+
     public GameObject pauseScreen;
-    bool isPaused = false;
     public Animator anim;
+    bool isPaused = false;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,19 +43,29 @@ public class PauseManager_Joycelyn : MonoBehaviour
     public void ResumeAnimationEnd()
     {
         isPaused = false;
-
         Time.timeScale = 1f;
-
         pauseScreen.SetActive(false);
     }
 
-    public void restart()
+
+    public void RestartAnimation()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        anim.Play("PausePanel_Transition");
+    }
+    public void MenuAimation()
+    {
+        anim.Play("PausePanel_Transition2");
     }
 
-    public void Menu()
+    public void RestartEnd()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ResumeAnimationEnd();
+    }
+
+    public void MenuEnd()
     {
         SceneManager.LoadScene(0); //(this loads the 0 buildindex from the build profiles)
+        ResumeAnimationEnd();
     }
 }
