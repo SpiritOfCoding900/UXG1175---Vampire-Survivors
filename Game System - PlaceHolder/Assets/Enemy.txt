@@ -7,7 +7,7 @@
 		"damageDealt" : 1,
 		"movementSpeed": 100,	
 		"firerate": 0,
-		"weaponSwingSpeed" : 10,
+		"weaponSwingSpeed" : 0.5,
 		"enemyPattern": "Chase",
 		"bulletSize": 0.0,
 		"bulletSpeed": 0.0

@@ -18,6 +18,7 @@ public class JSONReader : MonoBehaviour
         public string enemyPattern;
         public float bulletSize;
         public float bulletSpeed;
+
     }
 
     [System.Serializable]
@@ -26,9 +27,10 @@ public class JSONReader : MonoBehaviour
         public EnemyClass[] enemyClasses;
     }
 
-    public EnemyClassList enemyClassList = new EnemyClassList();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static EnemyClassList enemyClassList { get; private set; }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created\
+
+    private void Awake()
     {
         enemyClassList = JsonUtility.FromJson<EnemyClassList>(Enemy.text);
     }
