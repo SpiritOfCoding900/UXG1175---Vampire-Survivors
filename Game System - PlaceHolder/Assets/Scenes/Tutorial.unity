@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfd46a1a7ddf8941ba45f5473395a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OpenPlayerSelect: 0
 --- !u!4 &20345645
 Transform:
   m_ObjectHideFlags: 0
@@ -175,6 +176,7 @@ GameObject:
   - component: {fileID: 52418974}
   - component: {fileID: 52418973}
   - component: {fileID: 52418976}
+  - component: {fileID: 52418977}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -253,7 +255,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 84253573}
+  - {fileID: 752108339}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &52418976
@@ -270,6 +274,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   lerpSpeed: 0
+--- !u!114 &52418977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52418972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b2e4b436448054db8c003ba0a1ff1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1888817095}
+  openUIForWinning: 12
+  openUIForLosing: 13
+  sceneAfterWinning: putSceneName
+  timeRemaining: 10
+  pm: {fileID: 0}
 --- !u!1 &84253570
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,12 +392,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84253570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1888817094}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 52418975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1738,7 +1760,7 @@ RectTransform:
   - {fileID: 421435747}
   - {fileID: 838184518}
   - {fileID: 1068921039}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 52418975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2708,56 +2730,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607143048}
   m_CullTransparentMesh: 1
---- !u!1 &1733768791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1733768793}
-  - component: {fileID: 1733768792}
-  m_Layer: 0
-  m_Name: This Game's Time Limit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1733768792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733768791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b2e4b436448054db8c003ba0a1ff1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 0}
-  openUIForWinning: 12
-  openUIForLosing: 13
-  sceneAfterWinning: Main Scene
-  timeRemaining: 10
-  pm: {fileID: 0}
---- !u!4 &1733768793
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733768791}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805272359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,11 +3376,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 52418975}
-  - {fileID: 84253573}
-  - {fileID: 752108339}
   - {fileID: 20345645}
   - {fileID: 916171983}
-  - {fileID: 1733768793}
   - {fileID: 1994767097}
   - {fileID: 8538759858298536196}
   - {fileID: 233700855}
