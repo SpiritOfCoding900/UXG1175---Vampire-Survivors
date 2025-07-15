@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65456beb5c9401a40aa59c907d5cb148, type: 3}
   m_Name: Melee 2_Shield Weapon
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 615f3cdaa1374bd4db14286066f31cde, type: 3}
   prefab: {fileID: 2377416536511792137, guid: 65fa3b0be8ca50c4c92e502b4f52bd61, type: 3}
   damage: 7
   speed: 0

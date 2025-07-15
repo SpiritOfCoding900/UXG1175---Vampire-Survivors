@@ -8,6 +8,10 @@ public class WeaponScriptableObject : ScriptableObject
     [Header("Weapon Stats")]
 
     [SerializeField]
+    Sprite sprite;
+    public Sprite Sprite { get => sprite; private set => sprite = value; }
+
+    [SerializeField]
     GameObject prefab;
     public GameObject Prefab { get => prefab; private set => prefab = value; }
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class KnifeBehaviour : ProjectileWeaponBehaviour
 {
+    List<GameObject> markedEnemies;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected override void Start()
     {
@@ -15,5 +17,24 @@ public class KnifeBehaviour : ProjectileWeaponBehaviour
     {
         //base.Update();
         transform.position += direction * weaponData.Speed * Time.deltaTime;
+    }
+
+    protected override void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.CompareTag("Enemy"))
+        {
+            IDamagable enemy = col.GetComponent<IDamagable>();
+            enemy.TakeDamage(weaponData.Damage);
+            ReducePierce();
+        }
+    }
+
+    void ReducePierce()
+    {
+        currentPierce--;
+        if (currentPierce <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
