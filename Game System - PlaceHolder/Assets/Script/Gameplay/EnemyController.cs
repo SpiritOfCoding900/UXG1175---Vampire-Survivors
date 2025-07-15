@@ -16,14 +16,17 @@ public class EnemyController : MonoBehaviour
     public float baseBulletSpeed;
 
     protected string assignedPattern;
+    private JSONReader.EnemyClass storedEnemyData;
 
     public void Initialize(JSONReader.EnemyClass enemyData, int gameLevel) //create variable enemyData and brings in data fron JSON reader.
-    {        
+    {
+        storedEnemyData = enemyData;
+        
         // Store base stats from JSON
         enemyName = enemyData.name;
         assignedPattern = enemyData.enemyPattern;
 
-        ApplyLevelScaling(gameLevel, enemyData.health, enemyData.damageDealt, enemyData.movementSpeed, enemyData.firerate, enemyData.weaponSwingSpeed, enemyData.bulletSize, enemyData.bulletSpeed);
+        ApplyLevelScaling(gameLevel, storedEnemyData.health, storedEnemyData.damageDealt, storedEnemyData.movementSpeed, storedEnemyData.firerate, storedEnemyData.weaponSwingSpeed, storedEnemyData.bulletSize, storedEnemyData.bulletSpeed);
         baseHealth = maxHealth;
 
         Debug.Log($"Initialized {enemyName} for Level {gameLevel}: Health={baseHealth}, Damage={baseDamageAmount}, Speed={baseMovementSpeed}");
