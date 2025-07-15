@@ -24,6 +24,7 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
 
     private List<EnemyController> activeEnemies = new List<EnemyController>();
     private bool waveInProgress = false;
+    private bool gameFinished = false;  
 
     public delegate void EnemyVanquished();
     public static event EnemyVanquished OnEnemyVanquished;
@@ -46,8 +47,12 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
 
     private void HandleEnemyVanquished()
     {
+        if (gameFinished)
+        {
+            return;
+        }
         enemiesRemaining--;
-        for (int i = activeEnemies.Count  - 1; i >= 0; i--)
+        for (int i = activeEnemies.Count -1; i >= 0; i--)
         {
             if (activeEnemies[i] == null)
             {
@@ -58,8 +63,16 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
         if (enemiesRemaining <= 0 && waveInProgress)
         {
             waveInProgress = false;
-            StartCoroutine(StartAfterDelay(waveDowntime));
+            if (currentWave >= maxWaves)
+            {
+                gameFinished = true;
+            }
+            else
+            {
+                StartCoroutine(StartAfterDelay(waveDowntime));
+            }
         }
+
     }
 
     public int GetEnemiesRemaining()
@@ -75,8 +88,65 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
 
     private void StartNextWave()
     {
+        if (gameFinished)
+        {
+            return;
+        }
         currentWave++;
         waveInProgress = true;
+
+        maxEnemiesForWave = (int)(initalMaxEnemies + (currentWave - 1) * perWaveMaxEnemyIncrement);
+        maxEnemiesForWave = (int)(Mathf.Max(10, maxEnemiesForWave));
+
+        int noOfEnemiesToSpawn = Random.Range (1, maxEnemiesForWave +1);
+        enemiesRemaining = noOfEnemiesToSpawn;
+
+        StartCoroutine(SpawnWaveEnemies(noOfEnemiesToSpawn));
+    }    
+    
+    private IEnumerator SpawnWaveEnemies (int count)
+    {
+        for (int i = 0; i< count; i++)
+        {
+            if (gameFinished)
+            {
+                yield break;
+            }
+            SpawnRandom();
+            yield return new WaitForSeconds(enemySpawnDelay);
+        }
+    }
+
+    private void SpawnRandom()
+    {
+        GameObject targetEnemyPrefab = GetRandomEnemy();
+        
+        Vector2 randomSpawnPoint = new Vector2 (Random.Range (spawnAreaMin.x, spawnAreaMax.x),Random.Range(spawnAreaMin.y, spawnAreaMax.y));
+        Vector3 spawnPosition = new Vector3(randomSpawnPoint.x, randomSpawnPoint.y, spawnZ);
+
+        GameObject newEnemyGO = Instantiate(targetEnemyPrefab, spawnPosition, Quaternion.identity);
+        EnemyController enemyController = newEnemyGO.GetComponent<EnemyController>();
+
+        if (enemyController != null )
+        {
+            JSONReader.EnemyClass dataForEnemy = JSONReader.Instance.GetEnemyDataByName(targetEnemyPrefab.name);
+            if (dataForEnemy != null ) 
+            {
+                enemyController.Initialize(dataForEnemy, currentWave);
+                activeEnemies.Add(enemyController);
+            }
+        }
+    }
+
+    private GameObject GetRandomEnemy()
+    {
+        List<GameObject> allEnemies = new List<GameObject>();
+        allEnemies.Add(meleeEnemyPrefab);
+        allEnemies.Add(rangedEnemyQuickFirePrefab);
+        allEnemies.Add(rangedEnemySlowFirePrefab);
+
+        int randomIndex = Random.Range (0, allEnemies.Count);
+        return allEnemies[randomIndex];
     }
 
 

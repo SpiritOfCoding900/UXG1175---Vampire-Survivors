@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class JSONReader : MonoBehaviour
+public class JSONReader : SimpleSingleton<JSONReader>
 {
 
     public TextAsset Enemy;
@@ -32,7 +32,21 @@ public class JSONReader : MonoBehaviour
 
     private void Awake()
     {
-        enemyClassList = JsonUtility.FromJson<EnemyClassList>(Enemy.text);
+        base.Awake();
+        enemyClassList = JsonUtility.FromJson<EnemyClassList>(Enemy.text);     
+    }
+
+    public EnemyClass GetEnemyDataByName(string enemyName)
+    {
+        foreach (EnemyClass enemy in enemyClassList.enemyClasses)
+        {
+            if (enemy.name == enemyName)
+            {
+                return enemy;
+            }
+        }
+        return null;    
+
     }
 
     // Update is called once per frame
