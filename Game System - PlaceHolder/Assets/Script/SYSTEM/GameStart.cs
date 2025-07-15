@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class GameStart : MonoBehaviour
 {
+    public bool OpenPlayerSelect = true;
+
     private void Awake()
     {
         GameManager.Instance.spawnPlayerOnce(new Vector3(0, 0, 0));
-        UIManager.Instance.Open(GameUIID.PlayerSelection);
+
+        if (OpenPlayerSelect)
+            UIManager.Instance.Open(GameUIID.PlayerSelection);
     }
 }

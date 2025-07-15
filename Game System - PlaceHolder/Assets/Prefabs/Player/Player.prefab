@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 701024967049099049}
   - component: {fileID: 6716808457671858396}
   - component: {fileID: 2479869463145292344}
+  - component: {fileID: 3119676041210272644}
+  - component: {fileID: 7249939875641971244}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -189,6 +191,32 @@ MonoBehaviour:
   lastVerticalVector: 0
   moveDir: {x: 0, y: 0}
   lastMovedVector: {x: 0, y: 0}
+--- !u!114 &3119676041210272644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912711678232420945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e358329fbb5c248b79db183b91e3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 1
+--- !u!114 &7249939875641971244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912711678232420945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf6201e199a07145a3fca7af23ce0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EXPPoints: 0
 --- !u!1 &948208254903895343
 GameObject:
   m_ObjectHideFlags: 0

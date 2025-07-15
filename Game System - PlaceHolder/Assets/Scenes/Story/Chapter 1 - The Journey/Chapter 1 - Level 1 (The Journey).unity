@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 52418974}
   - component: {fileID: 52418973}
   - component: {fileID: 52418976}
+  - component: {fileID: 52418977}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -305,6 +306,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   lerpSpeed: 0
+--- !u!114 &52418977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52418972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b2e4b436448054db8c003ba0a1ff1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 2518132378091606483}
+  openUIForWinning: 12
+  openUIForLosing: 13
+  sceneAfterWinning: Chapter 1 - Level 1 (The Journey)_After Battle
+  timeRemaining: 10
+  pm: {fileID: 0}
 --- !u!1 &56187015
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,8 +429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 4900000, guid: e197cfb8aee04d440a631c22657a7250, type: 3}
-  enemyClassList:
-    enemyClasses: []
 --- !u!4 &63736128
 Transform:
   m_ObjectHideFlags: 0
@@ -456,6 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfd46a1a7ddf8941ba45f5473395a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OpenPlayerSelect: 1
 --- !u!4 &69114661
 Transform:
   m_ObjectHideFlags: 0
@@ -2427,65 +2445,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708392234}
   m_CullTransparentMesh: 1
---- !u!1 &1723524887
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1723524890}
-  - component: {fileID: 1723524889}
-  - component: {fileID: 1723524888}
-  m_Layer: 0
-  m_Name: Player Level & EXP In This Game
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1723524888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723524887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf6201e199a07145a3fca7af23ce0b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EXPPoints: 0
---- !u!114 &1723524889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723524887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50e358329fbb5c248b79db183b91e3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Level: 1
---- !u!4 &1723524890
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723524887}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725660486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,56 +2520,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725660486}
   m_CullTransparentMesh: 1
---- !u!1 &1733768791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1733768793}
-  - component: {fileID: 1733768792}
-  m_Layer: 0
-  m_Name: This Game's Time Limit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1733768792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733768791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b2e4b436448054db8c003ba0a1ff1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 2518132378091606483}
-  openUIForWinning: 12
-  openUIForLosing: 13
-  sceneAfterWinning: Chapter 1 - Level 1 (The Journey)_After Battle
-  timeRemaining: 10
-  pm: {fileID: 0}
---- !u!4 &1733768793
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733768791}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1761091396
 GameObject:
   m_ObjectHideFlags: 0
@@ -4188,8 +4097,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 52418975}
   - {fileID: 69114661}
-  - {fileID: 1723524890}
-  - {fileID: 1733768793}
   - {fileID: 1994767097}
   - {fileID: 8538759858298536196}
   - {fileID: 233700855}
