@@ -289,7 +289,7 @@ MonoBehaviour:
   timerText: {fileID: 1888817095}
   openUIForWinning: 12
   openUIForLosing: 13
-  sceneAfterWinning: putSceneName
+  sceneAfterWinning: Main Scene
   timeRemaining: 10
   pm: {fileID: 0}
 --- !u!1 &84253570

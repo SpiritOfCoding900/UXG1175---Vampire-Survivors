@@ -8,19 +8,26 @@ public class PlayerLevelUpStats : MonoBehaviour
 {
     public static PlayerLevelUpStats Instance;
 
+
+    // Levels
     public int Level = 1;
     public float experience { get; private set; }
-
     public static float expNeeded;
-
     public static float previousExperience;
 
+    // Gold
+    public int Gold = 0;
+
+    // Kills
+    public int Kills = 0;
 
 
     private void Start()
     {
         Level = 0;
         experience = 0;
+        Gold = 0;
+        Kills = 0;
     }
 
     private void Awake()
@@ -43,7 +50,7 @@ public class PlayerLevelUpStats : MonoBehaviour
     public void SetExperience(float expOrbsEarned)
     {
         experience += expOrbsEarned;
-        Debug.Log(10f + " Exps Aquired.");
+        Debug.Log(expOrbsEarned + " Exps Aquired.");
 
         expNeeded = ExpNeedToLvlUp(Level);
         previousExperience = ExpNeedToLvlUp(Level - 1);

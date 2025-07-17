@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 6541522775956302676}
   - component: {fileID: 587809767650949428}
   - component: {fileID: 1713402680593840399}
+  - component: {fileID: 8821403013715858192}
   - component: {fileID: 4581111688211177808}
+  - component: {fileID: 5222506709262427778}
   m_Layer: 0
   m_Name: WeaponMelee_Firewall
   m_TagString: Untagged
@@ -135,6 +137,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.2, y: 1.3}
   m_EdgeRadius: 0
+--- !u!50 &8821403013715858192
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39944549193458476}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &4581111688211177808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,3 +177,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponToGive: {fileID: 11400000, guid: a4c400ee25adac147be70a75b09cc59b, type: 2}
+--- !u!114 &5222506709262427778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39944549193458476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7925830a2e7178b4fbdb210ae572a30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minForce: 3
+  maxForce: 7
+  stopDelay: 0.1
+  dampTime: 0.3

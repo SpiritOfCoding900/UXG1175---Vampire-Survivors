@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5404644097741841884}
   - component: {fileID: 3296932068743076610}
-  - component: {fileID: 7276700538681360208}
   - component: {fileID: 6999885361601644133}
+  - component: {fileID: 7276700538681360208}
   m_Layer: 0
   m_Name: Melee 3_Firewall
   m_TagString: Untagged
@@ -89,20 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7276700538681360208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2377416536511792137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2d7de158771d1c4993a27418c270152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: a4c400ee25adac147be70a75b09cc59b, type: 2}
-  destroyAfterSeconds: 2
 --- !u!58 &6999885361601644133
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -139,3 +125,17 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.38
+--- !u!114 &7276700538681360208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377416536511792137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d7de158771d1c4993a27418c270152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: a4c400ee25adac147be70a75b09cc59b, type: 2}
+  destroyAfterSeconds: 2

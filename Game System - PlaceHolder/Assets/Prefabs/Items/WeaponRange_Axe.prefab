@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 2159553101967019027}
   - component: {fileID: 2626161492181699025}
   - component: {fileID: 5718310748797759096}
+  - component: {fileID: 4137643388423000347}
   - component: {fileID: 7694021652378741029}
+  - component: {fileID: -2443680573128908502}
   m_Layer: 0
   m_Name: WeaponRange_Axe
   m_TagString: Untagged
@@ -135,6 +137,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &4137643388423000347
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864556167537441666}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &7694021652378741029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,3 +177,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponToGive: {fileID: 11400000, guid: d6fe91696b235c54880a5b41a849c7ac, type: 2}
+--- !u!114 &-2443680573128908502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864556167537441666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7925830a2e7178b4fbdb210ae572a30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minForce: 3
+  maxForce: 7
+  stopDelay: 0.1
+  dampTime: 0.3

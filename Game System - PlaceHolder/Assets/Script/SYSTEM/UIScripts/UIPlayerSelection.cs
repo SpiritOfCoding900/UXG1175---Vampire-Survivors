@@ -72,6 +72,9 @@ public class UIPlayerSelection : MonoBehaviour
         Player.Instance.MaxHP = data02.MaxHP;
         Player.Instance.moveSpeed = data02.moveSpeed;
 
+        // Update Player's New class
+        Player.Instance.HP = Player.Instance.MaxHP;
+
         UIManager.Instance.CloseAll();
         // Do something with index, like pass it to GameManager or store selected class
     }

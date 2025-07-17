@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7108168928611955913}
   - component: {fileID: 7553814504885191532}
-  - component: {fileID: 799325967750923612}
   - component: {fileID: 253367132195584386}
   - component: {fileID: 8606407472730773200}
+  - component: {fileID: 799325967750923612}
   m_Layer: 0
   m_Name: Projectile 1_Knife
   m_TagString: Untagged
@@ -90,20 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &799325967750923612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4184251706862212685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5ff6f04f023a04ab7114f877999736, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 7218dca2baefa73469665a1b92ac3b30, type: 2}
-  destroyAfterSeconds: 1.5
 --- !u!60 &253367132195584386
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -198,3 +184,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &799325967750923612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184251706862212685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5ff6f04f023a04ab7114f877999736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 7218dca2baefa73469665a1b92ac3b30, type: 2}
+  destroyAfterSeconds: 1.5

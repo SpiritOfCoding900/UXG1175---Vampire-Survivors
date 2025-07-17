@@ -8,7 +8,6 @@ public class EXPEarned : MonoBehaviour
 {
     public static EXPEarned instance;
 
-
     [Header("EXP Points Earned: ")]
     public int EXPPoints;
 
