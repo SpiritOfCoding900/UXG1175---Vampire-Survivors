@@ -3065,18 +3065,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterCards:
-  - nameText: {fileID: 91594060406713000}
+  - NameOfClass: Warrior
+    nameText: {fileID: 91594060406713000}
     hpText: {fileID: 428755948909038626}
     speedText: {fileID: 8523998718599411548}
     descriptionText: {fileID: 617044896458996899}
-  - nameText: {fileID: 1993826464691942536}
+  - NameOfClass: Rogue
+    nameText: {fileID: 1993826464691942536}
     hpText: {fileID: 3242852894311191493}
     speedText: {fileID: 8004519167731652374}
     descriptionText: {fileID: 8900437206004697075}
-  - nameText: {fileID: 1214505713559793629}
+  - NameOfClass: Mage
+    nameText: {fileID: 1214505713559793629}
     hpText: {fileID: 1751794779734866053}
     speedText: {fileID: 3450515488246509257}
     descriptionText: {fileID: 3874421939048030703}
+  starterWeaponsPerClass:
+  - weapons:
+    - {fileID: 11400000, guid: 22a8d09b4ffc703418f17e9cdf353d6b, type: 2}
+    - {fileID: 11400000, guid: d6fe91696b235c54880a5b41a849c7ac, type: 2}
+  - weapons:
+    - {fileID: 11400000, guid: dfd4363d379278a438d8029d448a3978, type: 2}
+    - {fileID: 11400000, guid: 7218dca2baefa73469665a1b92ac3b30, type: 2}
+  - weapons:
+    - {fileID: 11400000, guid: a4c400ee25adac147be70a75b09cc59b, type: 2}
+    - {fileID: 11400000, guid: 374ded9409dcc09418e2ee173ca7c414, type: 2}
 --- !u!1 &7291165737173224500
 GameObject:
   m_ObjectHideFlags: 0

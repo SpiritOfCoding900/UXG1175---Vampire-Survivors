@@ -20,9 +20,9 @@ public class WeaponController : SimpleSingleton<WeaponController>
 
         // Initialize cooldown list
         foreach (var weapon in weaponDataList)
-        {
             currentCooldowns.Add(weapon.CoolDownDuration);
-        }
+
+        currentCooldowns.Add(0f);
     }
 
     protected virtual void Update()
