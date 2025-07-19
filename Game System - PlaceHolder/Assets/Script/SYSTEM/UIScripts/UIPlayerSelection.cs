@@ -65,8 +65,6 @@ public class UIPlayerSelection : MonoBehaviour
                 ui.descriptionText.text = data.description;
             }
         }
-
-        
     }
 
     public void ChosenWarriorClass() => ChooseClass(0);
@@ -95,7 +93,9 @@ public class UIPlayerSelection : MonoBehaviour
                 foreach (var weapon in starterWeaponsPerClass[index].weapons)
                 {
                     if (weapon != null)
+                    {
                         weaponCtrl.AddWeapon(weapon);
+                    }
                 }
             }
             else

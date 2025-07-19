@@ -3,14 +3,28 @@ using System.Collections.Generic;
 
 
 
+public enum TypeOfWeapon
+{
+    Melee,
+    Range
+}
+
 [System.Serializable]
 public class Weapon
 {
+    public TypeOfWeapon weaponType;
+    public string spritePath;
+    public string prefabPath;
     public string weaponName;
     public int damage;
-    public float range;
-    public float coolDownDuration;
+    public float speed;
+    public float cooldownDuration;
+    public int pierce;
+    [TextArea(2, 10)]
     public string description;
+
+    [System.NonSerialized] public Sprite loadedSprite;
+    [System.NonSerialized] public GameObject loadedPrefab;
 }
 
 [System.Serializable]
@@ -19,7 +33,7 @@ public class WeaponList
     public List<Weapon> weapons;
 }
 
-public class WeaponLoader : MonoBehaviour
+public class WeaponLoader : SimpleSingleton<WeaponLoader>
 {
     public WeaponList myWeaponList = new WeaponList();
 

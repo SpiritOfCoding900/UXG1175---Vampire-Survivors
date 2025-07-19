@@ -24,7 +24,7 @@ public class PlayerLevelUpStats : MonoBehaviour
 
     private void Start()
     {
-        Level = 0;
+        Level = 1;
         experience = 0;
         Gold = 0;
         Kills = 0;
@@ -66,5 +66,12 @@ public class PlayerLevelUpStats : MonoBehaviour
     public void LevelUp()
     {
         Level++;
+        LevelUpReward();
+    }
+
+    public void LevelUpReward()
+    {
+        Time.timeScale = 0f;
+        UIManager.Instance.OpenReplace(GameUIID.LevelUpSelection);
     }
 }

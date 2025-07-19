@@ -117,6 +117,7 @@ public enum GameUIID
     Tutorial,
     TutorialScreen,
     PlayerSelection,
+    LevelUpSelection,
 }
 
 public enum LevelUIID

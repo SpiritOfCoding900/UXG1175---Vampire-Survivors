@@ -3082,14 +3082,14 @@ MonoBehaviour:
     descriptionText: {fileID: 3874421939048030703}
   starterWeaponsPerClass:
   - weapons:
-    - {fileID: 11400000, guid: 22a8d09b4ffc703418f17e9cdf353d6b, type: 2}
     - {fileID: 11400000, guid: d6fe91696b235c54880a5b41a849c7ac, type: 2}
+    - {fileID: 11400000, guid: 22a8d09b4ffc703418f17e9cdf353d6b, type: 2}
   - weapons:
-    - {fileID: 11400000, guid: dfd4363d379278a438d8029d448a3978, type: 2}
     - {fileID: 11400000, guid: 7218dca2baefa73469665a1b92ac3b30, type: 2}
+    - {fileID: 11400000, guid: dfd4363d379278a438d8029d448a3978, type: 2}
   - weapons:
-    - {fileID: 11400000, guid: a4c400ee25adac147be70a75b09cc59b, type: 2}
     - {fileID: 11400000, guid: 374ded9409dcc09418e2ee173ca7c414, type: 2}
+    - {fileID: 11400000, guid: a4c400ee25adac147be70a75b09cc59b, type: 2}
 --- !u!1 &7291165737173224500
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,19 +14,28 @@ public class WeaponController : SimpleSingleton<WeaponController>
 
     protected Player pm;
 
+    
+    protected virtual void Awake()
+    {
+        //// Initialize cooldown list
+        //foreach (var weapon in weaponDataList)
+        //    currentCooldowns.Add(weapon.CoolDownDuration);
+    }
     protected virtual void Start()
     {
         pm = FindObjectOfType<Player>();
 
         // Initialize cooldown list
-        foreach (var weapon in weaponDataList)
-            currentCooldowns.Add(weapon.CoolDownDuration);
-
-        currentCooldowns.Add(0f);
+        foreach (var weapon in weaponDataList)               // This is
+            currentCooldowns.Add(weapon.CoolDownDuration);   // The Problem
     }
 
     protected virtual void Update()
     {
+        // Initialize cooldown list
+        foreach (var weapon in weaponDataList)
+            currentCooldowns.Add(weapon.CoolDownDuration);
+
         for (int i = 0; i < weaponDataList.Count; i++)
         {
             currentCooldowns[i] -= Time.deltaTime;
@@ -48,7 +57,7 @@ public class WeaponController : SimpleSingleton<WeaponController>
         }
 
         weaponDataList.Add(newWeapon);
-        currentCooldowns.Add(newWeapon.CoolDownDuration);
+        currentCooldowns.Add(0f);  // Use "Add(0f)" to allow immediate fire OR use "Add(newWeapon.CoolDownDuration)"
         return true;
     }
 

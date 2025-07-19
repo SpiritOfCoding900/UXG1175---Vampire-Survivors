@@ -18,3 +18,4 @@ MonoBehaviour:
   speed: 0
   cooldownDuration: 2.2
   pierce: 1
+  description: Garlics smell horrible! But horribly delicious!
