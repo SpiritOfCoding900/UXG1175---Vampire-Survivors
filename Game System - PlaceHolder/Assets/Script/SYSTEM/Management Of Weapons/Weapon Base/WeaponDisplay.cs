@@ -20,7 +20,7 @@ public class WeaponDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (ws.weaponDataList[listData] == null) return;
+        if (ws.weaponDataList.Count <= listData) return;
 
         if (ws.weaponDataList[listData] != null)
         {
