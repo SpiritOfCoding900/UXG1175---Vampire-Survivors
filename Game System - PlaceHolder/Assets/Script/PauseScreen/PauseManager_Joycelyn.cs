@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -26,11 +26,15 @@ public class PauseManager_Joycelyn : MonoBehaviour
 
     public void Pause()
     {
+        // Block pause input if PlayerSelection is open
+        // Don't pause while this UI is active
+        if (UIManager.Instance.IsUIOpen(GameUIID.PlayerSelection)) return;
+
+        // Allow pause if Escape is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = true;
             pauseScreen.SetActive(true);
-
             Time.timeScale = 0f;
         }
     }

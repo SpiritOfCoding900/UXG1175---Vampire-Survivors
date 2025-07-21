@@ -22,10 +22,17 @@ public class Player : SimpleSingleton<Player>
     [HideInInspector]
     public Vector2 lastMovedVector;
 
-    // public bool isInGroundZone = true;
+    [Header("Player screams when takes damage: ")]
+    public AudioClip PlayerScreams;
+    private AudioSource audioSource;
+
+    [Header("Player's Damage Invincible Time: ")]
+    private bool isInvincible = false;
+    public float invincibilityDuration = 1f;
 
     void Start()
     {
+        audioSource = FindObjectOfType<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2 (1, 0f);
         HP = MaxHP;
@@ -71,12 +78,28 @@ public class Player : SimpleSingleton<Player>
         rb.linearVelocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
     }
 
-    public void TakeDamage (int amount)
+    public void TakeDamage(int amount)
     {
+        if (isInvincible) return;
+
+        // AudioManager.Instance.SFXSound(SoundID.PlayerScreams);
+        audioSource.PlayOneShot(PlayerScreams, 1);
+
         HP -= amount;
+        Debug.Log($"Player took {amount} damage. Remaining HP: {HP}");
+
         if (HP <= 0)
-        {
             Debug.Log("You're dead");
-        }
+
+        // Start invincibility
+        StartCoroutine(InvincibilityCoroutine());
+    }
+
+    private IEnumerator InvincibilityCoroutine()
+    {
+        isInvincible = true;
+        // Optional: Add visual feedback here (e.g. blinking or flashing)
+        yield return new WaitForSeconds(invincibilityDuration);
+        isInvincible = false;
     }
 }

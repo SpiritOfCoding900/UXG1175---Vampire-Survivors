@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour, IDamagable
     // Update is called once per frame
     void Update()
     {
-        if (player != null || UIManager.Instance.OpenReplace(GameUIID.YouWin) != null)
+        if (player != null)
             isMoving = true;
         else
             isMoving = false;
@@ -74,6 +74,20 @@ public class Enemy : MonoBehaviour, IDamagable
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
             Destroy(gameObject, 1.5f);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Player player = other.GetComponent<Player>();
+            int damageValue = 10;
+
+            if (player != null)
+            {
+                player.TakeDamage(damageValue); // or any amount of damage you want
+            }
         }
     }
 }
