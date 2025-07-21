@@ -47,6 +47,6 @@ public class RangedEnemySlowFire : EnemyController
         GameObject newBulletGO = Instantiate (bulletPrefab, firePoint.position, transform.rotation);
         Bullet bullet = newBulletGO.GetComponent<Bullet>();
         Vector2 bulletDirection = transform.right;
-        bullet.InitializeBullet(baseDamageAmount, baseBulletSpeed, baseBulletSize, bulletDirection);
+        bullet.InitializeBullet(baseDamageAmount, baseBulletSpeed, baseBulletSize, baseBulletTime, bulletDirection);
     }
 }

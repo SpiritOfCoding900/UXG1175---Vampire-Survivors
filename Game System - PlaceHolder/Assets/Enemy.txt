@@ -3,39 +3,42 @@
 	[
 		{
 		"name": "MeleeEnemy",
-		"health": 10,
+		"health": 3,
 		"damageDealt" : 1,
-		"movementSpeed": 100,	
+		"movementSpeed": 1.0,	
 		"firerate": 0,
-		"weaponSwingSpeed" : 0.5,
+		"weaponSwingSpeed" : 1,
 		"enemyPattern": "Chase",
 		"bulletSize": 0.0,
-		"bulletSpeed": 0.0
+		"bulletSpeed": 0.0,
+		"bulletDespawnTime": 0.0
 		},
 
 		{
 		"name": "RangedEnemyQuickFire",
-		"health": 10,
+		"health": 1,
 		"damageDealt" : 1,
-		"movementSpeed": 100,
+		"movementSpeed": 1,
 		"firerate" : 3,
 		"weaponSwingSpeed": 0,
 		"enemyPattern": "Patrol",
 		"bulletSize": 0.5,
-		"bulletSpeed": 3.0
+		"bulletSpeed": 3.0,
+		"bulletDespawnTime": 5.0
 		},
 
 
 		{
 		"name": "RangedEnemySlowFire",
-		"health": 10,
+		"health": 2,
 		"damageDealt" : 2,
-		"movementSpeed": 50,
+		"movementSpeed": 0,
 		"firerate" : 0.5,
 		"weaponSwingSpeed": 0,
 		"enemyPattern": "Look",
-		"bulletSize": 2.0,
-		"bulletSpeed": 1.0
+		"bulletSize": 1.0,
+		"bulletSpeed": 1.0,
+		"bulletDespawnTime": 7.0
 		}
 	]
 }

@@ -18,6 +18,7 @@ public class JSONReader : SimpleSingleton<JSONReader>
         public string enemyPattern;
         public float bulletSize;
         public float bulletSpeed;
+        public float bulletTime;
 
     }
 

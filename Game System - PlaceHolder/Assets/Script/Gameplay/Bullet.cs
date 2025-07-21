@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float bulletTimer = 2f;
+    private float bulletTimer;
     private int bulletDamage;
     private float bulletSpeed;
     
@@ -14,11 +14,12 @@ public class Bullet : MonoBehaviour
     }
     
     //initialize bullet properties
-    public void InitializeBullet (int damageAmount, float speed, float size, Vector2 direction)
+    public void InitializeBullet (int damageAmount, float speed, float size, float despawnTime, Vector2 direction)
     {
         bulletDamage = damageAmount;
         bulletSpeed = speed;
         transform.localScale = Vector3.one * size;
+        bulletTimer = despawnTime;
         
         rb.linearVelocity = direction.normalized * bulletSpeed;
     }
@@ -34,7 +35,7 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag ("Player"))
         {
             Player.Instance.TakeDamage(bulletDamage);
+            Destroy(gameObject); //destroy after collision
         }
-        Destroy (gameObject); // Destroy after colliding with player.
     } 
 }

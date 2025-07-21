@@ -8,14 +8,13 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
     public GameObject rangedEnemyQuickFirePrefab;
     public GameObject rangedEnemySlowFirePrefab;
 
-    public float waveDowntime = 5f;
-    public float enemySpawnDelay = 0.5f;
-    public float initalMaxEnemies = 10f;
+    public float waveDowntime = 2f;
+    public float enemySpawnDelay = 0.1f;
+    public float initalMaxEnemies = 5f;
     public float perWaveMaxEnemyIncrement = 5f;
     public int maxWaves = 5;
 
-    public Vector2 spawnAreaMin = new Vector2(-30, -30);
-    public Vector2 spawnAreaMax = new Vector2(30, 30);
+    public float viewPointSpawn = 2f;
     public float spawnZ = 0f;
 
     public int currentWave = 0;
@@ -24,7 +23,9 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
 
     private List<EnemyController> activeEnemies = new List<EnemyController>();
     private bool waveInProgress = false;
-    private bool gameFinished = false;  
+    private bool gameFinished = false;
+
+    private Camera mainCamera;
 
     public delegate void EnemyVanquished();
     public static event EnemyVanquished OnEnemyVanquished;
@@ -42,6 +43,7 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        mainCamera = Camera.main;
         StartCoroutine(StartAfterDelay(waveDowntime));
     }
 
@@ -121,8 +123,10 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
     {
         GameObject targetEnemyPrefab = GetRandomEnemy();
         
-        Vector2 randomSpawnPoint = new Vector2 (Random.Range (spawnAreaMin.x, spawnAreaMax.x),Random.Range(spawnAreaMin.y, spawnAreaMax.y));
-        Vector3 spawnPosition = new Vector3(randomSpawnPoint.x, randomSpawnPoint.y, spawnZ);
+        float randomViewPointSpawnX = Random.Range (viewPointSpawn, 1f - viewPointSpawn);
+        float randomViewPointSpawnY = Random.Range(viewPointSpawn, 1f - viewPointSpawn);
+        Vector3 spawnPosition = mainCamera.ViewportToWorldPoint(new Vector3 ( randomViewPointSpawnX,  randomViewPointSpawnY, spawnZ));
+        spawnPosition.z = spawnZ;
 
         GameObject newEnemyGO = Instantiate(targetEnemyPrefab, spawnPosition, Quaternion.identity);
         EnemyController enemyController = newEnemyGO.GetComponent<EnemyController>();

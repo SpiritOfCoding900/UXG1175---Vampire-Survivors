@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     public float baseWeaponSwingSpeed;
     public float baseBulletSize;
     public float baseBulletSpeed;
+    public float baseBulletTime;
 
     protected string assignedPattern;
     private JSONReader.EnemyClass storedEnemyData;
@@ -26,13 +27,13 @@ public class EnemyController : MonoBehaviour
         enemyName = enemyData.name;
         assignedPattern = enemyData.enemyPattern;
 
-        ApplyLevelScaling(gameLevel, storedEnemyData.health, storedEnemyData.damageDealt, storedEnemyData.movementSpeed, storedEnemyData.firerate, storedEnemyData.weaponSwingSpeed, storedEnemyData.bulletSize, storedEnemyData.bulletSpeed);
+        ApplyLevelScaling(gameLevel, storedEnemyData.health, storedEnemyData.damageDealt, storedEnemyData.movementSpeed, storedEnemyData.firerate, storedEnemyData.weaponSwingSpeed, storedEnemyData.bulletSize, storedEnemyData.bulletSpeed, storedEnemyData.bulletTime);
         baseHealth = maxHealth;
 
         Debug.Log($"Initialized {enemyName} for Level {gameLevel}: Health={baseHealth}, Damage={baseDamageAmount}, Speed={baseMovementSpeed}");
     }
 
-    private void ApplyLevelScaling(int gameLevel, int presetHealth, int presetDamage, int presetMovespeed, float presetFirerate, int presetSwingSpeed, float presetBulletSize, float presetBulletSpeed) 
+    private void ApplyLevelScaling(int gameLevel, int presetHealth, int presetDamage, int presetMovespeed, float presetFirerate, int presetSwingSpeed, float presetBulletSize, float presetBulletSpeed, float presetBulletTime) 
     {
         float healthMultiplier = 1f + (gameLevel - 1) * 0.10f; // 10% health increase per level 
         float damageMultiplier = 1f + (gameLevel - 1) * 0.15f; //15% increase per level
@@ -43,23 +44,24 @@ public class EnemyController : MonoBehaviour
 
         maxHealth = (int)(presetHealth * healthMultiplier);
         baseDamageAmount = (int)(presetDamage * damageMultiplier);
-        baseMovementSpeed = (int)(presetMovespeed * speedMultiplier);
-        baseFireRate = (int) presetFirerate;
-        baseWeaponSwingSpeed = (int) presetSwingSpeed;
-        baseBulletSize = (int) presetBulletSize;
-        baseBulletSpeed = (int) (presetBulletSpeed * bulletSpeedMultiplier);
+        baseMovementSpeed = (presetMovespeed * speedMultiplier);
+        baseFireRate = presetFirerate;
+        baseWeaponSwingSpeed = presetSwingSpeed;
+        baseBulletSize = presetBulletSize;
+        baseBulletSpeed = (presetBulletSpeed * bulletSpeedMultiplier);
+        baseBulletTime = presetBulletTime;
 
 
 
-        //Ensure enemies do not have too low or high stats
+        //Ensure enemies do not have too high stats
+
         baseHealth = Mathf.Max(1, maxHealth);
         baseDamageAmount = Mathf.Max(1, baseDamageAmount);
         baseMovementSpeed = Mathf.Max(0.1f, baseMovementSpeed);
         baseFireRate = Mathf.Max(0.1f, baseFireRate);
         baseWeaponSwingSpeed = Mathf.Max(2f, baseWeaponSwingSpeed);
         baseBulletSpeed = Mathf.Max(1f, baseBulletSpeed);
-
-        //Removed: Minimum stats. Will determine by enemies individually.
+        baseBulletTime = Mathf.Max(10f, baseBulletTime);
     }
 
     public void TakeDamage (int playerDamage)

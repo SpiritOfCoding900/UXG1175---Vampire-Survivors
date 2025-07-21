@@ -593,16 +593,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74288d869e4e45740803b63185c89618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeEnemyPrefab: {fileID: 699875814949224106, guid: e8d7e28e07dade64e9da298ae7c97fdd, type: 3}
-  rangedEnemyQuickFirePrefab: {fileID: 5363003186764157608, guid: a92e6d4ba9256104cab3161512fa0fb8, type: 3}
+  meleeEnemyPrefab: {fileID: 699875814949224106, guid: 1e86a7dafdd0720479425dd95e57de22, type: 3}
+  rangedEnemyQuickFirePrefab: {fileID: 5363003186764157608, guid: d9adfd88cfb7262459f797353db161b6, type: 3}
   rangedEnemySlowFirePrefab: {fileID: 4127646999329817212, guid: 960059a0564fd9b4bb5ccfc2ea473bf0, type: 3}
-  waveDowntime: 5
+  waveDowntime: 2
   enemySpawnDelay: 0.5
-  initalMaxEnemies: 10
+  initalMaxEnemies: 5
   perWaveMaxEnemyIncrement: 5
   maxWaves: 5
-  spawnAreaMin: {x: -30, y: -30}
-  spawnAreaMax: {x: 30, y: 30}
+  viewPointSpawn: 2
   spawnZ: 0
   currentWave: 0
 --- !u!4 &153547083
@@ -852,6 +851,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Bat (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4299998
@@ -983,6 +986,10 @@ PrefabInstance:
     - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_Name
       value: Enemy_Bat (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1715,6 +1722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Bat
       objectReference: {fileID: 0}
+    - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -1839,6 +1850,10 @@ PrefabInstance:
     - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_Name
       value: Enemy_Bat (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3379,6 +3394,10 @@ PrefabInstance:
     - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_Name
       value: Enemy_Bat (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7576581117160147901}
   m_Layer: 0
   m_Name: MeleeEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699875814949224106}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -161,7 +161,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7576581117160147901
 MonoBehaviour:
@@ -184,4 +184,7 @@ MonoBehaviour:
   baseWeaponSwingSpeed: 0
   baseBulletSize: 0
   baseBulletSpeed: 0
+  baseBulletTime: 0
   timeBetweenAttacks: 0
+  attackRangeIndicator: {fileID: 1884984742716528417, guid: 558892386461faf40ae57931bac6d745, type: 3}
+  indicatorDisplay: 0.2
