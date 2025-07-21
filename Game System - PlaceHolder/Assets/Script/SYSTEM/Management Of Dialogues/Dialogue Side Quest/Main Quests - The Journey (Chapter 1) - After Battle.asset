@@ -16,7 +16,7 @@ MonoBehaviour:
   lines:
   - speakerName: Hero
     line: I have killed all the Vampires!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 957a8706b8d687a4db161b24ccd1a243, type: 3}
     leftSprite: {fileID: -6146700129834819302, guid: 9bcbe418df3b56e44ba75c64636feba5, type: 3}
     rightSprite: {fileID: -983950268115033839, guid: a5bbf3aa0764fc44b924cc1c94bb6fab, type: 3}
     centerSprite: {fileID: -1028169084966377830, guid: 5158d44ca8f1eb549bf946378630516f, type: 3}
@@ -25,7 +25,7 @@ MonoBehaviour:
     centerImageOpacity: 1
   - speakerName: Civilian
     line: Thank you Hero!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: c0f25f09813fdd642baf46c93962d9ab, type: 3}
     leftSprite: {fileID: -6146700129834819302, guid: 9bcbe418df3b56e44ba75c64636feba5, type: 3}
     rightSprite: {fileID: -983950268115033839, guid: a5bbf3aa0764fc44b924cc1c94bb6fab, type: 3}
     centerSprite: {fileID: -1028169084966377830, guid: 5158d44ca8f1eb549bf946378630516f, type: 3}

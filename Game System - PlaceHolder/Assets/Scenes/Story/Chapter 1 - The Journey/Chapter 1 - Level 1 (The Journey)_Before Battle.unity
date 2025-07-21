@@ -870,7 +870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1621336325}
   - component: {fileID: 1621336324}
-  - component: {fileID: 1621336323}
+  - component: {fileID: 1621336326}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -878,28 +878,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1621336323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621336322}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57e5da825ed0cc54ea453501e14075a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundList:
-  - name: EmperorHongBaJie_Dialogues
-    chapter: Side Quests - The Young Emperor (The Policy)
-    sounds: []
-  - name: Chainnino_Dialogues
-    chapter: Side Quests - The Young Emperor (The Policy)
-    sounds: []
-  - name: Morty
-    chapter: Side Quests - The Young Emperor (The Policy)
-    sounds: []
 --- !u!82 &1621336324
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1012,6 +990,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1621336326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621336322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85550504285caf14bbed6e6865905d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundList:
+  - name: EmperorHongBaJie_Dialogues
+    chapter: 
+    sounds: []
+  - name: Chainnino_Dialogues
+    chapter: 
+    sounds: []
+  - name: Morty
+    chapter: 
+    sounds: []
 --- !u!1 &1762768156
 GameObject:
   m_ObjectHideFlags: 0
