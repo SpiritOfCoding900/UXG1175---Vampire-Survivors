@@ -5,8 +5,6 @@ using UnityEngine.UI;
 public class GameTimer : SimpleSingleton<GameTimer>, ISceneTargetProvider
 {
     public TMP_Text timerText; // Assign this in the Inspector
-    public GameUIID openUIForWinning = GameUIID.YouWin;
-    public GameUIID openUIForLosing = GameUIID.YouLose;
     public string sceneAfterWinning = "putSceneName";
     public float timeRemaining = 60f; // 1 minute in seconds
     private bool timerIsRunning = true;
@@ -26,23 +24,25 @@ public class GameTimer : SimpleSingleton<GameTimer>, ISceneTargetProvider
             {
                 timerIsRunning = false;
                 DisplayTime(timeRemaining);
-                UIManager.Instance.OpenReplace(openUIForLosing);
+                UIManager.Instance.OpenReplace(GameUIID.YouLose);
                 Destroy(pm.gameObject);
-            }
-
-            if (timeRemaining > 0)
-            {
-                timeRemaining -= Time.deltaTime;
-                DisplayTime(timeRemaining);
             }
             else
             {
-                Debug.Log("Time has run out!");
-                timeRemaining = 0;
-                timerIsRunning = false;
-                UIManager.Instance.OpenReplace(openUIForWinning);
-                DestroyAllEnemies();
-                // DisplayTime(0);
+                if (timeRemaining > 0 && pm != null)
+                {
+                    timeRemaining -= Time.deltaTime;
+                    DisplayTime(timeRemaining);
+                }
+                else
+                {
+                    Debug.Log("Time has run out!");
+                    timeRemaining = 0;
+                    timerIsRunning = false;
+                    UIManager.Instance.OpenReplace(GameUIID.YouWin);
+                    DestroyAllEnemies();
+                    // DisplayTime(0);
+                }
             }
         }
     }

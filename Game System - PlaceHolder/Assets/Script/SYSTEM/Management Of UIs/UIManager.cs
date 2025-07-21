@@ -76,6 +76,11 @@ public class UIManager : SimpleSingleton<UIManager>
         _openedUI.Clear();
     }
 
+    //That UI is still there
+    public bool IsUIOpen(GameUIID id)
+    {
+        return _openedUI.Exists(go => go.GetComponent<GameUI>()?.ID == id);
+    }
 
     // Start is called before the first frame update
     void Start()

@@ -193,6 +193,8 @@ MonoBehaviour:
   lastVerticalVector: 0
   moveDir: {x: 0, y: 0}
   lastMovedVector: {x: 0, y: 0}
+  PlayerScreams: {fileID: 8300000, guid: 957a8706b8d687a4db161b24ccd1a243, type: 3}
+  invincibilityDuration: 1
 --- !u!114 &3119676041210272644
 MonoBehaviour:
   m_ObjectHideFlags: 0
