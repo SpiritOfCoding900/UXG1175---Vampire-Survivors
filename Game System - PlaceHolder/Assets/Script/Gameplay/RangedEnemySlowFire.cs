@@ -4,6 +4,7 @@ public class RangedEnemySlowFire : EnemyController
 {
     private Transform playerTransform;
     private float fireCooldown;
+    private Rigidbody2D rb;
 
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -19,6 +20,8 @@ public class RangedEnemySlowFire : EnemyController
         }
 
         fireCooldown = 0f;
+        rb = GetComponent<Rigidbody2D>();
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,5 +51,15 @@ public class RangedEnemySlowFire : EnemyController
         Bullet bullet = newBulletGO.GetComponent<Bullet>();
         Vector2 bulletDirection = transform.right;
         bullet.InitializeBullet(baseDamageAmount, baseBulletSpeed, baseBulletSize, baseBulletTime, bulletDirection);
+    }
+
+    void OnCollissionEnter2D(Collision2D collision)
+    {
+        rb.linearVelocity = Vector2.zero;
+    }
+
+    void OnColissionStay2D (Collision2D collision)
+    {
+        rb.linearVelocity += Vector2.zero;
     }
 }

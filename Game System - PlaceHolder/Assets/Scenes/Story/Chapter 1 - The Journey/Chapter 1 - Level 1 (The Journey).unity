@@ -593,7 +593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeEnemyPrefab: {fileID: 699875814949224106, guid: 1e86a7dafdd0720479425dd95e57de22, type: 3}
   rangedEnemyQuickFirePrefab: {fileID: 5363003186764157608, guid: d9adfd88cfb7262459f797353db161b6, type: 3}
-  rangedEnemySlowFirePrefab: {fileID: 4127646999329817212, guid: 960059a0564fd9b4bb5ccfc2ea473bf0, type: 3}
+  rangedEnemySlowFirePrefab: {fileID: 4127646999329817212, guid: dc28970438e6b7542af2076ce691e625, type: 3}
   waveDowntime: 2
   enemySpawnDelay: 0.5
   initalMaxEnemies: 5
