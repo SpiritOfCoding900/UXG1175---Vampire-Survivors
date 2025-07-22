@@ -9,7 +9,9 @@
       "speed": 16,
       "cooldownDuration": 0.85,
       "pierce": 1,
-      "description": "This knife was picked up from the ground just recently."
+      "description": "This knife was picked up from the ground just recently.",
+      "dropRate": 100,
+      "rarity": 0
     },
     {
       "weaponType": 0,
@@ -20,7 +22,9 @@
       "speed": 0,
       "cooldownDuration": 2.2,
       "pierce": 1,
-      "description": "Garlics smell horrible! But horribly delicious!"
+      "description": "Garlics smell horrible! But horribly delicious!",
+      "dropRate": 100,
+      "rarity": 0
     },
     {
       "weaponType": 0,
@@ -31,7 +35,9 @@
       "speed": 0,
       "cooldownDuration": 2.5,
       "pierce": 3,
-      "description": "It's an old Wooden Shield."
+      "description": "It's an old Wooden Shield.",
+      "dropRate": 100,
+      "rarity": 0
     },
     {
       "weaponType": 1,
@@ -42,7 +48,9 @@
       "speed": 11,
       "cooldownDuration": 1.5,
       "pierce": 3,
-      "description": "It's an old Axe."
+      "description": "It's an old Axe.",
+      "dropRate": 100,
+      "rarity": 0
     },
     {
       "weaponType": 0,
@@ -53,7 +61,9 @@
       "speed": 0,
       "cooldownDuration": 4,
       "pierce": 6,
-      "description": "FireWall is hot, it's really really hot!"
+      "description": "FireWall is hot, it's really really hot!",
+      "dropRate": 100,
+      "rarity": 1
     },
     {
       "weaponType": 1,
@@ -64,7 +74,9 @@
       "speed": 0,
       "cooldownDuration": 1.75,
       "pierce": 1,
-      "description": "FireBall is hot, it's really really hot!"
+      "description": "FireBall is hot, it's really really hot!",
+      "dropRate": 100,
+      "rarity": 1
     }
   ]
 }

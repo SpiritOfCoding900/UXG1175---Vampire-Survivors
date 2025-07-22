@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 10
-  moveSpeed: 2
+  moveSpeed: 4
   lootTable:
   - lootPrefab: {fileID: 1249515112944075895, guid: 6d1967f882931bf4cb4d265268a41add, type: 3}
     dropChance: 75

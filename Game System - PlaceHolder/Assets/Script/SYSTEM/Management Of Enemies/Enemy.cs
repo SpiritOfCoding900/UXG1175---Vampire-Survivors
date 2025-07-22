@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour, IDamagable
         if (other.CompareTag("Player"))
         {
             Player player = other.GetComponent<Player>();
-            int damageValue = 10;
+            int damageValue = 2;
 
             if (player != null)
             {

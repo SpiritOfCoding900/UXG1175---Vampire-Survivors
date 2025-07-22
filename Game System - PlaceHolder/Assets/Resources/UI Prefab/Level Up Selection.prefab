@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2826491083152836811}
   - component: {fileID: 4851223517850204690}
   m_Layer: 5
-  m_Name: Level (TMP)
+  m_Name: Rarity (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <REWARD LEVEL>
+  m_text: <RARITY LEVEL>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 3999286160410935675}
   - component: {fileID: 4222587503798234558}
   m_Layer: 5
-  m_Name: Level (TMP)
+  m_Name: Rarity (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <REWARD LEVEL>
+  m_text: <RARITY LEVEL>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2843,7 +2843,7 @@ GameObject:
   - component: {fileID: 274576378584571842}
   - component: {fileID: 1903409914939145036}
   m_Layer: 5
-  m_Name: Level (TMP)
+  m_Name: Rarity (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2896,7 +2896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <REWARD LEVEL>
+  m_text: <RARITY LEVEL>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -3156,19 +3156,19 @@ MonoBehaviour:
   - NameOfClass: 
     spriteHolder: {fileID: 6526134048191076649}
     nameText: {fileID: 4457436109301186843}
-    levelText: {fileID: 4222587503798234558}
+    rarityText: {fileID: 4222587503798234558}
     typeText: {fileID: 8487503539366684034}
     descriptionText: {fileID: 5619704907719294275}
   - NameOfClass: 
     spriteHolder: {fileID: 8710417177235487472}
     nameText: {fileID: 6617390669330733120}
-    levelText: {fileID: 1903409914939145036}
+    rarityText: {fileID: 1903409914939145036}
     typeText: {fileID: 4101190287160541745}
     descriptionText: {fileID: 1143949113392398900}
   - NameOfClass: 
     spriteHolder: {fileID: 5616803572944432157}
     nameText: {fileID: 2755574089053464347}
-    levelText: {fileID: 4851223517850204690}
+    rarityText: {fileID: 4851223517850204690}
     typeText: {fileID: 7057032387528388776}
     descriptionText: {fileID: 4322692074457665707}
   Reward1:

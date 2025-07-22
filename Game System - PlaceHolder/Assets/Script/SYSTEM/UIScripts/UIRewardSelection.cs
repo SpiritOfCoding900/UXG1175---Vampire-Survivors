@@ -17,9 +17,38 @@ public class RewardCardUI
     public string NameOfClass = "Put Reward Name Here";
     public Image spriteHolder; // UI Image to show weapon sprite
     public TMP_Text nameText;
-    public TMP_Text levelText;
+    public TMP_Text rarityText;
     public TMP_Text typeText;
     public TMP_Text descriptionText;
+
+    public void Setup(Weapon weapon)
+    {
+        NameOfClass = weapon.weaponName;
+        nameText.text = weapon.weaponName;
+        typeText.text = weapon.weaponType.ToString();
+        descriptionText.text = weapon.description;
+        spriteHolder.sprite = Resources.Load<Sprite>(weapon.spritePath);
+        rarityText.text = weapon.rarity.ToString();
+
+        switch (weapon.rarity)
+        {
+            case WeaponRarity.Common:
+                rarityText.color = Color.black;
+                break;
+            case WeaponRarity.Rare:
+                rarityText.color = Color.blue;
+                break;
+            case WeaponRarity.Epic:
+                rarityText.color = new Color(0.6f, 0.2f, 1f); // Purple
+                break;
+            case WeaponRarity.Legendary:
+                rarityText.color = Color.yellow;
+                break;
+            case WeaponRarity.Mystical:
+                rarityText.color = Color.cyan;
+                break;
+        }
+    }
 }
 
 public class UIRewardSelection : MonoBehaviour
@@ -86,23 +115,27 @@ public class UIRewardSelection : MonoBehaviour
     {
         if (rewardCards.Count < 3) return;
 
-        rewardCards[0].NameOfClass = Reward1.weaponName;
-        rewardCards[0].nameText.text = Reward1.weaponName;
-        rewardCards[0].typeText.text = Reward1.weaponType.ToString();
-        rewardCards[0].descriptionText.text = Reward1.description;
-        rewardCards[0].spriteHolder.sprite = Resources.Load<Sprite>(Reward1.spritePath);
+        rewardCards[0].Setup(Reward1);
+        rewardCards[1].Setup(Reward2);
+        rewardCards[2].Setup(Reward3);
 
-        rewardCards[1].NameOfClass = Reward2.weaponName;
-        rewardCards[1].nameText.text = Reward2.weaponName;
-        rewardCards[1].typeText.text = Reward2.weaponType.ToString();
-        rewardCards[1].descriptionText.text = Reward2.description;
-        rewardCards[1].spriteHolder.sprite = Resources.Load<Sprite>(Reward2.spritePath);
+        //rewardCards[0].NameOfClass = Reward1.weaponName;
+        //rewardCards[0].nameText.text = Reward1.weaponName;
+        //rewardCards[0].typeText.text = Reward1.weaponType.ToString();
+        //rewardCards[0].descriptionText.text = Reward1.description;
+        //rewardCards[0].spriteHolder.sprite = Resources.Load<Sprite>(Reward1.spritePath);
 
-        rewardCards[2].NameOfClass = Reward3.weaponName;
-        rewardCards[2].nameText.text = Reward3.weaponName;
-        rewardCards[2].typeText.text = Reward3.weaponType.ToString();
-        rewardCards[2].descriptionText.text = Reward3.description;
-        rewardCards[2].spriteHolder.sprite = Resources.Load<Sprite>(Reward3.spritePath);
+        //rewardCards[1].NameOfClass = Reward2.weaponName;
+        //rewardCards[1].nameText.text = Reward2.weaponName;
+        //rewardCards[1].typeText.text = Reward2.weaponType.ToString();
+        //rewardCards[1].descriptionText.text = Reward2.description;
+        //rewardCards[1].spriteHolder.sprite = Resources.Load<Sprite>(Reward2.spritePath);
+
+        //rewardCards[2].NameOfClass = Reward3.weaponName;
+        //rewardCards[2].nameText.text = Reward3.weaponName;
+        //rewardCards[2].typeText.text = Reward3.weaponType.ToString();
+        //rewardCards[2].descriptionText.text = Reward3.description;
+        //rewardCards[2].spriteHolder.sprite = Resources.Load<Sprite>(Reward3.spritePath);
     }
 
     public void GetWeapons()

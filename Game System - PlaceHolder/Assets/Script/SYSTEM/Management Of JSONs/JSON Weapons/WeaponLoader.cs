@@ -9,6 +9,15 @@ public enum TypeOfWeapon
     Range
 }
 
+public enum WeaponRarity
+{
+    Common,
+    Rare,
+    Epic,
+    Legendary,
+    Mystical,
+}
+
 [System.Serializable]
 public class Weapon
 {
@@ -22,6 +31,9 @@ public class Weapon
     public int pierce;
     [TextArea(2, 10)]
     public string description;
+
+    public int droprate = 100;
+    public WeaponRarity rarity = WeaponRarity.Common;
 
     [System.NonSerialized] public Sprite loadedSprite;
     [System.NonSerialized] public GameObject loadedPrefab;
