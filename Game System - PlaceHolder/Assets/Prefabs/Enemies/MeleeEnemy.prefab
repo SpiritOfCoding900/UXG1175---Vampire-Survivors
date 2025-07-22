@@ -31,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -124,17 +124,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1}
+  m_Offset: {x: -0.00000011920929, y: 0.0079289675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 3.125, y: 2}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28125, y: 1.5}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.125, y: 2}
+  m_Size: {x: 1.3093896, y: 1.5200994}
   m_EdgeRadius: 0
 --- !u!50 &5798848082866507428
 Rigidbody2D:
@@ -144,7 +144,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699875814949224106}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -161,7 +161,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &7576581117160147901
 MonoBehaviour:
@@ -185,6 +185,13 @@ MonoBehaviour:
   baseBulletSize: 0
   baseBulletSpeed: 0
   baseBulletTime: 0
+  lootTable:
+  - lootPrefab: {fileID: 1249515112944075895, guid: 6d1967f882931bf4cb4d265268a41add, type: 3}
+    dropChance: 75
+  - lootPrefab: {fileID: 5299610263654042868, guid: 3c1aaad543b530345be1a45b73b4f1ea, type: 3}
+    dropChance: 5
+  - lootPrefab: {fileID: 297425250076761137, guid: c0e92d018e9539c438edbde9c1932708, type: 3}
+    dropChance: 5
   timeBetweenAttacks: 0
-  attackRangeIndicator: {fileID: 1884984742716528417, guid: 558892386461faf40ae57931bac6d745, type: 3}
+  attackRangeIndicator: {fileID: 0}
   indicatorDisplay: 0.2

@@ -26,6 +26,7 @@ public class GameTimer : SimpleSingleton<GameTimer>, ISceneTargetProvider
                 DisplayTime(timeRemaining);
                 UIManager.Instance.OpenReplace(GameUIID.YouLose);
                 Destroy(pm.gameObject);
+                Time.timeScale = 0f;
             }
             else
             {
@@ -41,6 +42,7 @@ public class GameTimer : SimpleSingleton<GameTimer>, ISceneTargetProvider
                     timerIsRunning = false;
                     UIManager.Instance.OpenReplace(GameUIID.YouWin);
                     DestroyAllEnemies();
+                    Time.timeScale = 0f;
                     // DisplayTime(0);
                 }
             }

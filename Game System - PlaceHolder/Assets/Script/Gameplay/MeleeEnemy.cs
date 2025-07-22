@@ -39,8 +39,15 @@ public class MeleeEnemy : EnemyController
         Debug.Log(playerTransform.position);
 
 
+        var enemyDir = gameObject.GetComponent<SpriteRenderer>();
+        if (lookDirection.x < 0)
+            enemyDir.flipX = true;
+        else
+            enemyDir.flipX = false;
+
+
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-        Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
+        Quaternion targetRotation = Quaternion.Euler(0, 0, 0);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f); // 10f is rotation speed.
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 

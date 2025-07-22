@@ -21,6 +21,12 @@ public class PlayerLevelUpStats : MonoBehaviour
     // Kills
     public int Kills = 0;
 
+    // Spent
+    public int Spent = 0;
+
+    // Items
+    public int Items = 0;
+
 
     private void Start()
     {
@@ -28,6 +34,8 @@ public class PlayerLevelUpStats : MonoBehaviour
         experience = 0;
         Gold = 0;
         Kills = 0;
+        Spent = 0;
+        Items = 0;
     }
 
     private void Awake()

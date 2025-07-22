@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7036065948393897928}
   - component: {fileID: 5271008763995275944}
   - component: {fileID: 8142751797306863433}
+  - component: {fileID: 4772336682101595590}
   m_Layer: 5
   m_Name: Golds Earned (TMP) (1)
   m_TagString: Untagged
@@ -136,6 +137,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4772336682101595590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214547846678873984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2464d72d17561a0488dda0f9585b3dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1296632641554282141
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +438,7 @@ GameObject:
   - component: {fileID: 856806195566785622}
   - component: {fileID: 5789490788778968765}
   - component: {fileID: 5981752899256501411}
+  - component: {fileID: 5774950114896117500}
   m_Layer: 5
   m_Name: Legandary Items (TMP) (3)
   m_TagString: Untagged
@@ -550,6 +564,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5774950114896117500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4228113830799453473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8035b6917207dd64ba2c93b88b088db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6707708579985358077
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +587,7 @@ GameObject:
   - component: {fileID: 7136364128647485162}
   - component: {fileID: 192466462951143814}
   - component: {fileID: 6587580063470091371}
+  - component: {fileID: 6607567152592382139}
   m_Layer: 5
   m_Name: Vampires Killed (TMP)
   m_TagString: Untagged
@@ -686,6 +713,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6607567152592382139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6707708579985358077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4825f9341d28d4746aac87b87ce168dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7337847167052103404
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +993,7 @@ GameObject:
   - component: {fileID: 7383532866573841381}
   - component: {fileID: 6652990643225751459}
   - component: {fileID: 8501267724970329525}
+  - component: {fileID: 3856121714963028126}
   m_Layer: 5
   m_Name: Golds Spent (TMP) (2)
   m_TagString: Untagged
@@ -1079,6 +1119,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3856121714963028126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7957338739845121931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c83f704c422714d8ddd37e73e71bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7966235967989065770
 GameObject:
   m_ObjectHideFlags: 0

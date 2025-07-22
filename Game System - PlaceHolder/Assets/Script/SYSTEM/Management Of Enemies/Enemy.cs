@@ -69,7 +69,6 @@ public class Enemy : MonoBehaviour, IDamagable
                 }
             }
 
-
             // Death
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;

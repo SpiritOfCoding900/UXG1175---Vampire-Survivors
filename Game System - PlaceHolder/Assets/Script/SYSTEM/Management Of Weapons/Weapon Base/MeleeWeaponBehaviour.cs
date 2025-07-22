@@ -37,7 +37,7 @@ public class MeleeWeaponBehaviour : MonoBehaviour
         {
             IDamagable enemy = col.GetComponent<IDamagable>();
             enemy.TakeDamage(weaponData.Damage);
-            //ReducePierce();
+            ReducePierce();
         }
     }
 
