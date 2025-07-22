@@ -8,9 +8,9 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
     public GameObject rangedEnemyQuickFirePrefab;
     public GameObject rangedEnemySlowFirePrefab;
 
-    public float waveDowntime = 2f;
+    public float waveDowntime = 0.5f;
     public float enemySpawnDelay = 0.1f;
-    public float initalMaxEnemies = 5f;
+    public float initalMaxEnemies = 7f;
     public float perWaveMaxEnemyIncrement = 5f;
     public int maxWaves = 5;
 
@@ -100,7 +100,7 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
         maxEnemiesForWave = (int)(initalMaxEnemies + (currentWave - 1) * perWaveMaxEnemyIncrement);
         maxEnemiesForWave = (int)(Mathf.Max(10, maxEnemiesForWave));
 
-        int noOfEnemiesToSpawn = Random.Range (1, maxEnemiesForWave +1);
+        int noOfEnemiesToSpawn = Random.Range (5, maxEnemiesForWave +1);
         enemiesRemaining = noOfEnemiesToSpawn;
 
         StartCoroutine(SpawnWaveEnemies(noOfEnemiesToSpawn));
@@ -123,8 +123,8 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
     {
         GameObject targetEnemyPrefab = GetRandomEnemy();
         
-        float randomViewPointSpawnX = Random.Range (viewPointSpawn, 1f - viewPointSpawn);
-        float randomViewPointSpawnY = Random.Range(viewPointSpawn, 1f - viewPointSpawn);
+        float randomViewPointSpawnX = Random.Range (viewPointSpawn, 0.5f - viewPointSpawn);
+        float randomViewPointSpawnY = Random.Range(viewPointSpawn, 0.5f - viewPointSpawn);
         Vector3 spawnPosition = mainCamera.ViewportToWorldPoint(new Vector3 ( randomViewPointSpawnX,  randomViewPointSpawnY, spawnZ));
         spawnPosition.z = spawnZ;
 

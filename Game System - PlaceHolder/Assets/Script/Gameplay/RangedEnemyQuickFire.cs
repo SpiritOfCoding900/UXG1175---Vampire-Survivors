@@ -20,7 +20,7 @@ public class RangedEnemyQuickFire : EnemyController
 
     private Rigidbody2D rb;
 
-    public float rotationSpeed = 3.0f;
+    public float rotationSpeed = 1.0f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
