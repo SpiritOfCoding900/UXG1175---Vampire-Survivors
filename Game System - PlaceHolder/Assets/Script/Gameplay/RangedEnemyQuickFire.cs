@@ -10,7 +10,7 @@ public class RangedEnemyQuickFire : EnemyController
     public Transform pointOFire;
 
     //Randomized Patrol settings around player
-    public float patrolRadius = 5f;
+    public float patrolRadius = 10f;
     public int patrolPoints = 3;
     public float patrolPointTreshold = 0.1f;
     private float patrolOffset = 3f;
