@@ -28,6 +28,9 @@ public class UIPlayerSelection : MonoBehaviour
     [Header("Starter Weapons")]
     public List<WeaponSet> starterWeaponsPerClass; // Match this list index with class index (0 = Warrior, 1 = Ranger, etc.)
 
+    ///test
+    public Animator anim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -83,6 +86,10 @@ public class UIPlayerSelection : MonoBehaviour
 
         // Update Player's New class
         Player.Instance.HP = Player.Instance.MaxHP;
+
+        ///TEst
+        Player.Instance.ID = data02.ID;
+
 
         // Assign weapon if available
         if (index < starterWeaponsPerClass.Count)

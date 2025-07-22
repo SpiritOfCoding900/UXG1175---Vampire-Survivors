@@ -12,6 +12,9 @@ public class Player : SimpleSingleton<Player>
 
     public float moveSpeed = 5f;
     public string description;
+
+    public int ID;
+
     private Rigidbody2D rb;
     [HideInInspector]
     public float lastHorizontalVector;
@@ -22,25 +25,25 @@ public class Player : SimpleSingleton<Player>
     [HideInInspector]
     public Vector2 lastMovedVector;
 
-    [Header("Player screams when takes damage: ")]
-    public AudioClip PlayerScreams;
-    private AudioSource audioSource;
+    // public bool isInGroundZone = true;
 
-    [Header("Player's Damage Invincible Time: ")]
-    private bool isInvincible = false;
-    public float invincibilityDuration = 1f;
+    ///This is for the animation - Joycelyn
+    public Animator anim;
 
+    /// This is for checking which class is selected  - Joycelyn
+    UIPlayerSelection playerSelection;
+    Player player;
     void Start()
     {
-        audioSource = FindObjectOfType<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
-        lastMovedVector = new Vector2 (1, 0f);
+        lastMovedVector = new Vector2(1, 0f);
         HP = MaxHP;
     }
 
     void Update()
     {
         Inputmanagement();
+
     }
 
     void FixedUpdate()
@@ -48,23 +51,71 @@ public class Player : SimpleSingleton<Player>
         Move();
     }
 
+    ///To select the correct class sprites - Jsoycelyn
+    void ClassChecker()
+    {
+        if (ID == 0)
+        {
+            anim.SetBool("isBarb", true);
+            anim.SetBool("isRog", false);
+            anim.SetBool("isAlc", false);
+        }
+        if (ID == 1)
+        {
+
+            anim.SetBool("isRog", true);
+            anim.SetBool("isBarb", false);
+            anim.SetBool("isAlc", false);
+        }
+        if (ID == 2)
+        {
+            anim.SetBool("isAlc", true);
+            anim.SetBool("isBarb", false);
+            anim.SetBool("isRog", false);
+        }
+    }
+
     void Inputmanagement()
     {
+        ///To select the correct class sprites - Jsoycelyn
+        ClassChecker();
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
         moveDir = new Vector2(moveX, moveY).normalized;
 
-        if(moveDir.x != 0)
+        ///This is for the animation - Joycelyn
+        anim.SetFloat("Walk", -1);
+
+        if (moveDir.x != 0)
         {
             lastHorizontalVector = moveDir.x;
             lastMovedVector = new Vector2(lastHorizontalVector, 0f);
+
+            ///This is for the animation - Joycelyn
+            anim.SetFloat("Walk", Mathf.Abs(lastHorizontalVector));
+            var player = gameObject.GetComponent<SpriteRenderer>();
+            if (lastMovedVector.x < 0) 
+            {
+                player.flipX = true;
+            }
+            else
+            {
+                player.flipX = false;
+            }
+            //Debug.Log("hori val: " + lastHorizontalVector);
         }
 
         if (moveDir.y != 0)
         {
             lastVerticalVector = moveDir.y;
             lastMovedVector = new Vector2(0f, lastVerticalVector);
+
+            ///This is for the animation - Joycelyn
+            anim.SetFloat("Walk", Mathf.Abs(lastVerticalVector));
+            Debug.Log("hori val: " + lastVerticalVector);
+
         }
 
         if (moveDir.x != 0 && moveDir.y != 0)
@@ -80,26 +131,11 @@ public class Player : SimpleSingleton<Player>
 
     public void TakeDamage(int amount)
     {
-        if (isInvincible) return;
-
-        // AudioManager.Instance.SFXSound(SoundID.PlayerScreams);
-        audioSource.PlayOneShot(PlayerScreams, 1);
-
         HP -= amount;
-        Debug.Log($"Player took {amount} damage. Remaining HP: {HP}");
-
         if (HP <= 0)
+        {
             Debug.Log("You're dead");
-
-        // Start invincibility
-        StartCoroutine(InvincibilityCoroutine());
-    }
-
-    private IEnumerator InvincibilityCoroutine()
-    {
-        isInvincible = true;
-        // Optional: Add visual feedback here (e.g. blinking or flashing)
-        yield return new WaitForSeconds(invincibilityDuration);
-        isInvincible = false;
+        }
     }
 }
+

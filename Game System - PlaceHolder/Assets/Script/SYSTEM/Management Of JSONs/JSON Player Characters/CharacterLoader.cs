@@ -10,6 +10,8 @@ public class CharacterClass
     public int MaxHP;
     public float moveSpeed;
     public string description;
+
+    public int ID;
 }
 
 
