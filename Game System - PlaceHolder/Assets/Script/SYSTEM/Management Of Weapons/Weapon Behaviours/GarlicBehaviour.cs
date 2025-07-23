@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GarlicBehaviour : MeleeWeaponBehaviour /*, IDamagable*/
+public class GarlicBehaviour : MeleeWeaponBehaviour
 {
     List<GameObject> markedEnemies;
 

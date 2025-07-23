@@ -287,8 +287,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1888817095}
-  openUIForWinning: 12
-  openUIForLosing: 13
   sceneAfterWinning: Main Scene
   timeRemaining: 10
   pm: {fileID: 0}
@@ -3439,6 +3437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588fa0a4b1f940a4c8fe251c00e43ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponController: {fileID: 0}
   weaponToGive: {fileID: 11400000, guid: 374ded9409dcc09418e2ee173ca7c414, type: 2}
 --- !u!50 &225213013302624053
 Rigidbody2D:
@@ -3902,6 +3901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588fa0a4b1f940a4c8fe251c00e43ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponController: {fileID: 0}
   weaponToGive: {fileID: 11400000, guid: 7218dca2baefa73469665a1b92ac3b30, type: 2}
 --- !u!212 &2626161493658342284
 SpriteRenderer:
@@ -3970,6 +3970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588fa0a4b1f940a4c8fe251c00e43ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponController: {fileID: 0}
   weaponToGive: {fileID: 11400000, guid: dfd4363d379278a438d8029d448a3978, type: 2}
 --- !u!61 &3673079775302587689
 BoxCollider2D:
@@ -4099,6 +4100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588fa0a4b1f940a4c8fe251c00e43ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponController: {fileID: 0}
   weaponToGive: {fileID: 11400000, guid: a4c400ee25adac147be70a75b09cc59b, type: 2}
 --- !u!114 &4662139725810887588
 MonoBehaviour:
@@ -4112,6 +4114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588fa0a4b1f940a4c8fe251c00e43ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponController: {fileID: 0}
   weaponToGive: {fileID: 11400000, guid: 22a8d09b4ffc703418f17e9cdf353d6b, type: 2}
 --- !u!114 &5222506709158670040
 MonoBehaviour:
@@ -4463,6 +4466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588fa0a4b1f940a4c8fe251c00e43ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponController: {fileID: 0}
   weaponToGive: {fileID: 11400000, guid: d6fe91696b235c54880a5b41a849c7ac, type: 2}
 --- !u!4 &7738450317926136121
 Transform:

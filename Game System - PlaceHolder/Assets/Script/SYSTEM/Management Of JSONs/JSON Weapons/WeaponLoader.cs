@@ -48,8 +48,6 @@ public class WeaponList
 public class WeaponLoader : SimpleSingleton<WeaponLoader>
 {
     public WeaponList myWeaponList = new WeaponList();
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         TextAsset jsonFile = Resources.Load<TextAsset>("weapons");

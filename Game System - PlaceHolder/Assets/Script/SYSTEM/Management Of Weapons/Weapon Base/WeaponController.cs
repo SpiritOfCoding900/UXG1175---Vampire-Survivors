@@ -72,8 +72,5 @@ public class WeaponController : SimpleSingleton<WeaponController>
         {
             knife.DirectionChecker(pm.lastMovedVector);
         }
-
-        // GarlicBehaviour does not need Initialize, it's auto-handled by Start()
-        // So no need to do anything special here
     }
 }

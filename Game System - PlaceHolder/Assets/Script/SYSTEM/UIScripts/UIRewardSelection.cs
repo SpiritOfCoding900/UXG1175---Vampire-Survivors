@@ -118,24 +118,6 @@ public class UIRewardSelection : MonoBehaviour
         rewardCards[0].Setup(Reward1);
         rewardCards[1].Setup(Reward2);
         rewardCards[2].Setup(Reward3);
-
-        //rewardCards[0].NameOfClass = Reward1.weaponName;
-        //rewardCards[0].nameText.text = Reward1.weaponName;
-        //rewardCards[0].typeText.text = Reward1.weaponType.ToString();
-        //rewardCards[0].descriptionText.text = Reward1.description;
-        //rewardCards[0].spriteHolder.sprite = Resources.Load<Sprite>(Reward1.spritePath);
-
-        //rewardCards[1].NameOfClass = Reward2.weaponName;
-        //rewardCards[1].nameText.text = Reward2.weaponName;
-        //rewardCards[1].typeText.text = Reward2.weaponType.ToString();
-        //rewardCards[1].descriptionText.text = Reward2.description;
-        //rewardCards[1].spriteHolder.sprite = Resources.Load<Sprite>(Reward2.spritePath);
-
-        //rewardCards[2].NameOfClass = Reward3.weaponName;
-        //rewardCards[2].nameText.text = Reward3.weaponName;
-        //rewardCards[2].typeText.text = Reward3.weaponType.ToString();
-        //rewardCards[2].descriptionText.text = Reward3.description;
-        //rewardCards[2].spriteHolder.sprite = Resources.Load<Sprite>(Reward3.spritePath);
     }
 
     public void GetWeapons()

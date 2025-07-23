@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class GameManager : SimpleSingleton<GameManager>
 {
-
-    //private EnemyStats _enemyStats;
-
     [Header("Player Data: ")]
     [SerializeField]
     private Player player01;

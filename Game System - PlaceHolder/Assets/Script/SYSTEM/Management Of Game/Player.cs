@@ -25,8 +25,6 @@ public class Player : SimpleSingleton<Player>
     [HideInInspector]
     public Vector2 lastMovedVector;
 
-    // public bool isInGroundZone = true;
-
     ///This is for the animation - Joycelyn
     public Animator anim;
 

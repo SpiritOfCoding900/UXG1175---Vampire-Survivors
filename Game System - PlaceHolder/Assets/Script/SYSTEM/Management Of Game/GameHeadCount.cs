@@ -39,17 +39,6 @@ public class GameHeadCount : SimpleSingleton<GameHeadCount>
             hasEnded = true;
         }
 
-        //// Count dead enemies and clean up
-        //for (int i = Enemy.ActiveEnemies.Count - 1; i >= 0; i--)
-        //{
-        //    if (Enemy.ActiveEnemies[i] == null)
-        //    {
-        //        Enemy.ActiveEnemies.RemoveAt(i);
-        //        killsSoFar++;
-        //        UpdateKillText();
-        //    }
-        //}
-
         // Win condition has not yet met
         if (killsSoFar < killsRequired) return;
 

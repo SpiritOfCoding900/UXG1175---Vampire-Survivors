@@ -76,20 +76,17 @@ public class UIPlayerSelection : MonoBehaviour
 
     private void ChooseClass(int index)
     {
-        Time.timeScale = 1f;
-
-
         // Assign the stats based on respective class
         var data02 = CharacterLoader.Instance.myClassList.classes[index];
+
+        ///Test
+        Player.Instance.ID = data02.ID;
+        // Update Player's New class
         Player.Instance.MaxHP = data02.MaxHP;
+        Player.Instance.HP = Player.Instance.MaxHP;
         Player.Instance.moveSpeed = data02.moveSpeed;
 
-        // Update Player's New class
-        Player.Instance.HP = Player.Instance.MaxHP;
-
-        ///TEst
-        Player.Instance.ID = data02.ID;
-
+        Time.timeScale = 1f;
 
         // Assign weapon if available
         if (index < starterWeaponsPerClass.Count)
