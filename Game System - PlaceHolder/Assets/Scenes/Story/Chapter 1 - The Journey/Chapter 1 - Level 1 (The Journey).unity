@@ -591,9 +591,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74288d869e4e45740803b63185c89618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeEnemyPrefab: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
-  rangedEnemyQuickFirePrefab: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
-  rangedEnemySlowFirePrefab: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
+  enemyPrefabs:
+  - {fileID: 699875814949224106, guid: d52c9b4ed7f9a1c49bc54028b4cf4c98, type: 3}
+  - {fileID: 699875814949224106, guid: 1e86a7dafdd0720479425dd95e57de22, type: 3}
+  - {fileID: 5363003186764157608, guid: d9adfd88cfb7262459f797353db161b6, type: 3}
+  - {fileID: 4127646999329817212, guid: dc28970438e6b7542af2076ce691e625, type: 3}
   waveDowntime: 2
   enemySpawnDelay: 0.5
   initalMaxEnemies: 5
@@ -855,7 +857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -995,7 +997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1864,7 +1866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1997,7 +1999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3707,7 +3709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2497789936001560633, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5105159417851029933, guid: 70c493f8aa0d3da419d8911da808a1e2, type: 3}
       propertyPath: m_LocalPosition.x

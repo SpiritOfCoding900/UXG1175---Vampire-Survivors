@@ -102,6 +102,15 @@ public class EnemyController : MonoBehaviour, IDamagable
                 }
             }
 
+            // Stop movement completely
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.isKinematic = true;
+            }
+
             // Death
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;

@@ -4,9 +4,11 @@ using System.Collections.Generic;
 
 public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
 {
-    public GameObject meleeEnemyPrefab;
-    public GameObject rangedEnemyQuickFirePrefab;
-    public GameObject rangedEnemySlowFirePrefab;
+    //public GameObject meleeEnemyPrefab;
+    //public GameObject rangedEnemyQuickFirePrefab;
+    //public GameObject rangedEnemySlowFirePrefab;
+
+    public List<GameObject> enemyPrefabs = new List<GameObject>();
 
     public float waveDowntime = 0.5f;
     public float enemySpawnDelay = 0.1f;
@@ -144,13 +146,14 @@ public class EnemySpawnManager : SimpleSingleton<EnemySpawnManager>
 
     private GameObject GetRandomEnemy()
     {
-        List<GameObject> allEnemies = new List<GameObject>();
-        allEnemies.Add(meleeEnemyPrefab);
-        allEnemies.Add(rangedEnemyQuickFirePrefab);
-        allEnemies.Add(rangedEnemySlowFirePrefab);
+        if (enemyPrefabs == null || enemyPrefabs.Count == 0)
+        {
+            Debug.LogWarning("Enemy prefab list is empty!");
+            return null;
+        }
 
-        int randomIndex = Random.Range (0, allEnemies.Count);
-        return allEnemies[randomIndex];
+        int randomIndex = Random.Range (0, enemyPrefabs.Count);
+        return enemyPrefabs[randomIndex];
     }
 
 

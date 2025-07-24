@@ -53,7 +53,7 @@ public class RangedEnemyQuickFire : EnemyController
         Vector2 lookDirection = (playerTransform.position - transform.position);
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler (0, 0, angle);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
         
         
         
