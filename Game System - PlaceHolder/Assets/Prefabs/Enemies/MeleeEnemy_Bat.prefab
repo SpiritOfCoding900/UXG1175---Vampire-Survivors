@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5798848082866507428}
   - component: {fileID: 7576581117160147901}
   m_Layer: 0
-  m_Name: MeleeEnemy
+  m_Name: MeleeEnemy_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 1220015289
   m_SortingLayer: 3
   m_SortingOrder: 20
-  m_Sprite: {fileID: -586673999964297059, guid: b22dca62c3e40f244bd429e951c7263e, type: 3}
+  m_Sprite: {fileID: -6885433733598600802, guid: 13e92c1d98e659941b362fa7c74445fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,13 +128,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 1.15625}
+    oldSize: {x: 0.17, y: 0.11}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.81, y: 1.15}
+  m_Size: {x: 0.17, y: 0.11}
   m_EdgeRadius: 0
 --- !u!50 &5798848082866507428
 Rigidbody2D:
@@ -192,7 +192,6 @@ MonoBehaviour:
     dropChance: 5
   - lootPrefab: {fileID: 297425250076761137, guid: c0e92d018e9539c438edbde9c1932708, type: 3}
     dropChance: 5
-  attackRange: 1
   timeBetweenAttacks: 0
   attackRangeIndicator: {fileID: 3322299815010836073, guid: 42076a15a0b5cd44ea8aa943c63ed2a6, type: 3}
   indicatorDisplay: 0.2

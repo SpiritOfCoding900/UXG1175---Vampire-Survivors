@@ -15,7 +15,7 @@
     },
     {
       "weaponType": 0,
-      "spritePath": "Sprites/Weapons/Green Apple",
+      "spritePath": "Sprites/Weapons/Garlic",
       "prefabPath": "Prefabs/Weapons/Melee 1_Garlic",
       "weaponName": "Garlic",
       "damage": 10,

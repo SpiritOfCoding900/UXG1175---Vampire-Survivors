@@ -6,7 +6,7 @@ public class MeleeEnemy : EnemyController
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Transform playerTransform;
     private float attackCooldownTimer;
-    private float attackRange = 2f;
+    public float attackRange = 1f;
     public float timeBetweenAttacks;
     private Rigidbody2D rb;
 
@@ -81,7 +81,7 @@ public class MeleeEnemy : EnemyController
     {
         GameObject indicator = Instantiate (attackRangeIndicator, transform.position, Quaternion.identity);
         indicator.transform.SetParent(this.transform);
-        indicator.transform.localScale = Vector3.one * (attackRange * 2);
+        // indicator.transform.localScale = Vector3.one * (attackRange * 2);
         Destroy (indicator, indicatorDisplay);
     }
        
