@@ -176,7 +176,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588fa0a4b1f940a4c8fe251c00e43ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponToGive: {fileID: 11400000, guid: 374ded9409dcc09418e2ee173ca7c414, type: 2}
+  weaponController: {fileID: 0}
+  weaponID: 5
+  weaponToGive:
+    weaponType: 0
+    spritePath: 
+    prefabPath: 
+    weaponName: 
+    damage: 0
+    speed: 0
+    cooldownDuration: 0
+    pierce: 0
+    description: 
+    droprate: 100
+    rarity: 0
 --- !u!114 &-3904034935307545345
 MonoBehaviour:
   m_ObjectHideFlags: 0

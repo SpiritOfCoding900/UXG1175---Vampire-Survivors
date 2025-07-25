@@ -128,7 +128,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.52}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.1}
+    pivot: {x: 0.5, y: 0.33}
     oldSize: {x: 1.1875, y: 1.28125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -176,7 +176,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588fa0a4b1f940a4c8fe251c00e43ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponToGive: {fileID: 11400000, guid: a4c400ee25adac147be70a75b09cc59b, type: 2}
+  weaponController: {fileID: 0}
+  weaponID: 4
+  weaponToGive:
+    weaponType: 0
+    spritePath: 
+    prefabPath: 
+    weaponName: 
+    damage: 0
+    speed: 0
+    cooldownDuration: 0
+    pierce: 0
+    description: 
+    droprate: 100
+    rarity: 0
 --- !u!114 &5222506709262427778
 MonoBehaviour:
   m_ObjectHideFlags: 0

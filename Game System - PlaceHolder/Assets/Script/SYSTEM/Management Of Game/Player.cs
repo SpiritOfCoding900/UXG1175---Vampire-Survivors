@@ -15,6 +15,11 @@ public class Player : SimpleSingleton<Player>
 
     public int ID;
 
+    [Header("Player's Invincibility: ")]
+    private bool isInvincible = false;
+    public float invincibilityDuration = 1.5f; // seconds
+    private float invincibilityTimer;
+
     private Rigidbody2D rb;
     [HideInInspector]
     public float lastHorizontalVector;
@@ -41,7 +46,7 @@ public class Player : SimpleSingleton<Player>
     void Update()
     {
         Inputmanagement();
-
+        PlayerInvincibility();
     }
 
     void FixedUpdate()
@@ -122,6 +127,19 @@ public class Player : SimpleSingleton<Player>
         }
     }
 
+    void PlayerInvincibility()
+    {
+        if (isInvincible)
+        {
+            invincibilityTimer -= Time.deltaTime;
+            if (invincibilityTimer <= 0f)
+            {
+                isInvincible = false;
+                Debug.Log("Player is no longer invincible.");
+            }
+        }
+    }
+
     void Move()
     {
         rb.linearVelocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
@@ -129,11 +147,19 @@ public class Player : SimpleSingleton<Player>
 
     public void TakeDamage(int amount)
     {
-        HP -= amount;
+        if (isInvincible) return;
+
         if (HP <= 0)
         {
             Debug.Log("You're dead");
         }
+        
+        HP -= amount;
+
+        // Activate temporary invincibility
+        isInvincible = true;
+        invincibilityTimer = invincibilityDuration;
+        Debug.Log("Player is now invincible.");
     }
 }
 

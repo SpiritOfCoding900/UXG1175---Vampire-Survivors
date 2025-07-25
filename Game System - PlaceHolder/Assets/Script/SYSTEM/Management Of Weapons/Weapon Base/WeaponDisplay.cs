@@ -28,7 +28,7 @@ public class WeaponDisplay : MonoBehaviour
             Color newColor = im.color;         // Get the current color
             newColor.a = 1f;                   // Set alpha to 1 (Fully Non-transparent)
             im.color = newColor;               // Apply the updated color
-            im.sprite = ws.weaponDataList[listData].Sprite;
+            im.sprite = ws.weaponDataList[listData].loadedSprite;
         }
         else
         {

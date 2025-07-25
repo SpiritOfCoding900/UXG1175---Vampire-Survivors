@@ -22,9 +22,11 @@ public class RangedEnemyQuickFire : EnemyController
 
     public float rotationSpeed = 1.0f;
 
+    [Header("Enemy's Current Stats: ")]
+    public float expGained = 2f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+
     void Awake()
     {
         GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
@@ -53,7 +55,7 @@ public class RangedEnemyQuickFire : EnemyController
         Vector2 lookDirection = (playerTransform.position - transform.position);
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler (0, 0, angle);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
         
         
         
@@ -121,5 +123,43 @@ public class RangedEnemyQuickFire : EnemyController
         Bullet bullet = newBullet.GetComponent<Bullet>();
         Vector2 bulletDirection = transform.right;
         bullet.InitializeBullet(baseDamageAmount, baseBulletSpeed, baseBulletSize, baseBulletTime, bulletDirection);
+    }
+
+    protected override void Die()
+    {
+        if (baseHealth <= 0)
+        {
+            // Give Exp
+            PlayerLevelUpStats.Instance.SetExperience(expGained);
+            Debug.LogWarning($"{expGained} experience gained from killing {gameObject.name}.");
+
+            // Count Kills
+            PlayerLevelUpStats.Instance.Kills += 1;
+
+            // Drop Loot
+            foreach (var loot in lootTable)
+            {
+                float roll = Random.Range(0f, 100f);
+                if (roll <= loot.dropChance && loot.lootPrefab != null)
+                {
+                    Instantiate(loot.lootPrefab, transform.position, Quaternion.identity);
+                    break; // Drop only one item; remove this if multiple drops allowed
+                }
+            }
+
+            // Stop movement completely
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.isKinematic = true;
+            }
+
+            // Death
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
+            Destroy(gameObject, 1.5f);
+        }
     }
 }

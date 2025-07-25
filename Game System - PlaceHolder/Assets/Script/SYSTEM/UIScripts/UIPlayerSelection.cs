@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class CharacterCardUI
 [System.Serializable]
 public class WeaponSet
 {
-    public List<WeaponScriptableObject> weapons;
+    public List<Weapon> weapons;
 }
 
 
@@ -24,9 +25,6 @@ public class UIPlayerSelection : MonoBehaviour
 {
     [Header("Character Select")]
     public List<CharacterCardUI> characterCards; // Assign 3 elements in the inspector
-
-    [Header("Starter Weapons")]
-    public List<WeaponSet> starterWeaponsPerClass; // Match this list index with class index (0 = Warrior, 1 = Ranger, etc.)
 
     ///test
     public Animator anim;
@@ -77,34 +75,27 @@ public class UIPlayerSelection : MonoBehaviour
     private void ChooseClass(int index)
     {
         // Assign the stats based on respective class
-        var data02 = CharacterLoader.Instance.myClassList.classes[index];
+        var characterData = CharacterLoader.Instance.myClassList.classes[index];
 
         ///Test
-        Player.Instance.ID = data02.ID;
+        Player.Instance.ID = characterData.ID;
         // Update Player's New class
-        Player.Instance.MaxHP = data02.MaxHP;
+        Player.Instance.MaxHP = characterData.MaxHP;
         Player.Instance.HP = Player.Instance.MaxHP;
-        Player.Instance.moveSpeed = data02.moveSpeed;
+        Player.Instance.moveSpeed = characterData.moveSpeed;
 
         Time.timeScale = 1f;
 
-        // Assign weapon if available
-        if (index < starterWeaponsPerClass.Count)
+        WeaponController weaponCtrl = Player.Instance.GetComponentInChildren<WeaponController>();
+        if (weaponCtrl != null)
         {
-            WeaponController weaponCtrl = Player.Instance.GetComponentInChildren<WeaponController>();
-            if (weaponCtrl != null)
-            {
-                foreach (var weapon in starterWeaponsPerClass[index].weapons)
-                {
-                    if (weapon != null)
-                    {
-                        weaponCtrl.AddWeapon(weapon);
-                    }
-                }
-            }
-            else
-                Debug.LogWarning("WeaponController not found on Player!");
+            var primaryWeaponData = WeaponLoader.Instance.myWeaponList.weapons[characterData.starterWeaponPrimary];
+            var secondaryWeaponData = WeaponLoader.Instance.myWeaponList.weapons[characterData.starterWeaponSecondary];
+            weaponCtrl.AddWeapon(primaryWeaponData);
+            weaponCtrl.AddWeapon(secondaryWeaponData);
         }
+        else
+            Debug.LogWarning("WeaponController not found on Player!");
 
         UIManager.Instance.CloseAll();
 

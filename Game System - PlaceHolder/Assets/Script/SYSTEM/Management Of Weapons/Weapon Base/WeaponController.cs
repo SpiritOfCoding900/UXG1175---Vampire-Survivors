@@ -9,7 +9,7 @@ using UnityEngine;
 public class WeaponController : SimpleSingleton<WeaponController>
 {
     [Header("Weapon Stats")]
-    public List<WeaponScriptableObject> weaponDataList = new List<WeaponScriptableObject>();
+    public List<Weapon> weaponDataList = new List<Weapon>();
     private List<float> currentCooldowns = new List<float>();
 
     protected Player pm;
@@ -17,25 +17,44 @@ public class WeaponController : SimpleSingleton<WeaponController>
     
     protected virtual void Awake()
     {
-        //// Initialize cooldown list
-        //foreach (var weapon in weaponDataList)
-        //    currentCooldowns.Add(weapon.CoolDownDuration);
+
     }
     protected virtual void Start()
     {
         pm = FindObjectOfType<Player>();
 
-        // Initialize cooldown list
-        foreach (var weapon in weaponDataList)               // This is
-            currentCooldowns.Add(weapon.CoolDownDuration);   // The Problem
+        // Initialize cooldowns based on loaded weapons
+        foreach (var weapon in weaponDataList)
+        {
+            currentCooldowns.Add(weapon.cooldownDuration);
+
+            // Load prefab and store
+            if (!string.IsNullOrEmpty(weapon.prefabPath))
+            {
+                GameObject prefab = Resources.Load<GameObject>(weapon.prefabPath);
+                if (prefab != null)
+                    weapon.loadedPrefab = prefab;
+                else
+                    Debug.LogError($"Failed to load prefab from path: {weapon.prefabPath}");
+            }
+
+            // Load sprite and store
+            if (!string.IsNullOrEmpty(weapon.spritePath))
+            {
+                Sprite spriteForIcon = Resources.Load<Sprite>(weapon.spritePath);
+                if (spriteForIcon != null)
+                {
+                    weapon.loadedSprite = spriteForIcon;
+                }
+
+                else
+                    Debug.LogError($"Could not load sprite at path: {weapon.spritePath}");
+            }
+        }
     }
 
     protected virtual void Update()
     {
-        // Initialize cooldown list
-        foreach (var weapon in weaponDataList)
-            currentCooldowns.Add(weapon.CoolDownDuration);
-
         for (int i = 0; i < weaponDataList.Count; i++)
         {
             currentCooldowns[i] -= Time.deltaTime;
@@ -43,17 +62,44 @@ public class WeaponController : SimpleSingleton<WeaponController>
             if (currentCooldowns[i] <= 0f)
             {
                 Attack(weaponDataList[i]);
-                currentCooldowns[i] = weaponDataList[i].CoolDownDuration;
+                currentCooldowns[i] = weaponDataList[i].cooldownDuration;
             }
         }
     }
 
-    public bool AddWeapon(WeaponScriptableObject newWeapon)
+    public bool AddWeapon(Weapon newWeapon)
     {
-        if (weaponDataList.Contains(newWeapon))
+        // Cannot have the same weapon
+        if (weaponDataList.Exists(w => w.weaponName == newWeapon.weaponName))
         {
-            Debug.LogWarning($"Weapon {newWeapon.name} is already in the list!");
+            Debug.LogWarning($"Weapon {newWeapon.weaponName} already exists.");
             return false;
+        }
+
+        // Load prefab and store
+        if (!string.IsNullOrEmpty(newWeapon.prefabPath))
+        {
+            GameObject prefab = Resources.Load<GameObject>(newWeapon.prefabPath);
+            if (prefab != null)
+            {
+                newWeapon.loadedPrefab = prefab;
+            }
+                
+            else
+                Debug.LogError($"Could not load prefab at path: {newWeapon.prefabPath}");
+        }
+
+        // Load sprite and store
+        if (!string.IsNullOrEmpty(newWeapon.spritePath))
+        {
+            Sprite spriteForIcon = Resources.Load<Sprite>(newWeapon.spritePath);
+            if (spriteForIcon != null)
+            {
+                newWeapon.loadedSprite = spriteForIcon;
+            }
+
+            else
+                Debug.LogError($"Could not load sprite at path: {newWeapon.spritePath}");
         }
 
         weaponDataList.Add(newWeapon);
@@ -61,16 +107,27 @@ public class WeaponController : SimpleSingleton<WeaponController>
         return true;
     }
 
-    protected virtual void Attack(WeaponScriptableObject weaponData)
+    protected virtual void Attack(Weapon weaponData)
     {
-        GameObject weaponObj = Instantiate(weaponData.Prefab, transform.position, Quaternion.identity);
-        weaponObj.transform.parent = transform;
+        if (weaponData.loadedPrefab == null)
+        {
+            Debug.LogError($"Missing loadedPrefab for: {weaponData.weaponName}");
+            return;
+        }
 
-        // Optional: apply knife direction if it's a knife
-        var knife = weaponObj.GetComponent<KnifeBehaviour>();
+        GameObject instance = Instantiate(weaponData.loadedPrefab, transform.position, Quaternion.identity);
+        instance.transform.parent = transform;
+
+        var knife = instance.GetComponent<KnifeBehaviour>();
         if (knife != null && pm != null)
         {
             knife.DirectionChecker(pm.lastMovedVector);
+        }
+
+        var projectile = instance.GetComponent<ProjectileWeaponBehaviour>();
+        if (projectile != null)
+        {
+            projectile.Initialize(weaponData.speed, weaponData.damage, weaponData.pierce, weaponData.cooldownDuration);
         }
     }
 }

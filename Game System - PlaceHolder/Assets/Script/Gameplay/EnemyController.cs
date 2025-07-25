@@ -78,10 +78,8 @@ public class EnemyController : MonoBehaviour, IDamagable
         }
     }
 
-    private void Die()
+    protected virtual void Die()
     {
-        // Destroy(gameObject);
-
         if (baseHealth <= 0)
         {
             // Give Exp
@@ -100,6 +98,15 @@ public class EnemyController : MonoBehaviour, IDamagable
                     Instantiate(loot.lootPrefab, transform.position, Quaternion.identity);
                     break; // Drop only one item; remove this if multiple drops allowed
                 }
+            }
+
+            // Stop movement completely
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.isKinematic = true;
             }
 
             // Death

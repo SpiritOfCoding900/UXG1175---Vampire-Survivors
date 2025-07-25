@@ -12,6 +12,9 @@ public class CharacterClass
     public string description;
 
     public int ID;
+
+    public int starterWeaponPrimary;
+    public int starterWeaponSecondary;
 }
 
 

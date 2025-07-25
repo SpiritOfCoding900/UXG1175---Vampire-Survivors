@@ -33,6 +33,14 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         
     }
 
+    public void Initialize(float speed, int damage, int pierce, float cooldown)
+    {
+        currentSpeed = speed;
+        currentDamage = damage;
+        currentPierce = pierce;
+        currentCoolDownDuration = cooldown;
+    }
+
     public void DirectionChecker(Vector3 dir)
     {
         direction = dir;

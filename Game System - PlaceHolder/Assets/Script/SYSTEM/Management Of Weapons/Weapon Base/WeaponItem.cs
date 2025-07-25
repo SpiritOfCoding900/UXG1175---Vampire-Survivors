@@ -1,9 +1,17 @@
+using UnityEditor.U2D.Animation;
 using UnityEngine;
 
 public class WeaponItem : MonoBehaviour
 {
     [SerializeField] private WeaponController weaponController;   // Assign this in Inspector
-    [SerializeField] private WeaponScriptableObject weaponToGive;
+    [SerializeField] private int weaponID;
+    [SerializeField] private Weapon weaponToGive;
+
+
+    private void Awake()
+    {
+        weaponToGive = WeaponLoader.Instance.myWeaponList.weapons[weaponID];
+    }
 
     private void Update()
     {
@@ -15,18 +23,12 @@ public class WeaponItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            weaponController.weaponDataList.Add(weaponToGive); // Add to player's inventory
-            Destroy(gameObject); // Destroy the pickup
-
-            if (WeaponController.Instance != null)
+            if (weaponController != null)
             {
-                WeaponController.Instance.AddWeapon(weaponToGive);
-                Destroy(gameObject); // Destroy the pickup
-
-                bool added = WeaponController.Instance.AddWeapon(weaponToGive);
+                bool added = weaponController.AddWeapon(weaponToGive);
                 if (added)
                 {
-                    Debug.Log($"Player picked up: {weaponToGive.name}");
+                    Debug.Log($"Player picked up: {weaponToGive.weaponName}");
                     Destroy(gameObject); // Destroy the pickup
                 }
                 else

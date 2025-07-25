@@ -53,7 +53,6 @@ public class RewardCardUI
 
 public class UIRewardSelection : MonoBehaviour
 {
-    [SerializeField] private WeaponScriptableObject weaponToGive;
     public WeaponController weaponController;   // Assign this in Inspector
     public List<RewardCardUI> rewardCards;      // List of UI slots (3 only)
 
@@ -153,14 +152,11 @@ public class UIRewardSelection : MonoBehaviour
         if (weaponController == null)
             weaponController = FindObjectOfType<Player>().GetComponentInChildren<WeaponController>();
 
-        WeaponScriptableObject newWeapon = ConvertToScriptableObject(selectedWeapon);
 
-        if (newWeapon != null && weaponController != null)
+        if (selectedWeapon != null && weaponController != null)
         {
-            weaponController.weaponDataList.Add(newWeapon); // Add to player's inventory
-            // weaponController.AddWeapon(newWeapon);
-
-            Debug.Log($"Weapon '{newWeapon.WeaponName}' added to weaponDataList.");
+            weaponController.AddWeapon(selectedWeapon); // Add to player's inventory        
+            Debug.Log($"Weapon '{selectedWeapon.weaponName}' added to weaponDataList.");
         }
         else
         {
