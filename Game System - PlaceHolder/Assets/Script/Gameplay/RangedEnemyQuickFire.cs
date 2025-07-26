@@ -25,6 +25,9 @@ public class RangedEnemyQuickFire : EnemyController
     [Header("Enemy's Current Stats: ")]
     public float expGained = 2f;
 
+    ///Animation - Joycelyn
+    public Animator anim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()
@@ -107,13 +110,18 @@ public class RangedEnemyQuickFire : EnemyController
         //Moving
         rb.linearVelocity = directionToTarget * baseMovementSpeed;
 
+        ///Moving Animation - Joycelyn
+        if(enemyName == "RangedEnemyQuickFire")
+        {
+            anim.Play("Enemy_RangedQuick_Idle");
+        }
+
         //Change Patrol Point 
         if (Vector2.Distance(currentPosition, targetPoint) < patrolPointTreshold)
         {
             currentPatrolPoint = (currentPatrolPoint +1 ) % generatedPatrolPoints.Count;
         }
 
-        
     }
     
     private void ShootBullet()
@@ -129,6 +137,12 @@ public class RangedEnemyQuickFire : EnemyController
     {
         if (baseHealth <= 0)
         {
+            ///Death Animation - Joycelyn
+            if(enemyName == "RangedEnemyQuickFire")
+            {
+                anim.Play("Enemy_RangedQuick_Die");
+            }
+
             // Give Exp
             PlayerLevelUpStats.Instance.SetExperience(expGained);
             Debug.LogWarning($"{expGained} experience gained from killing {gameObject.name}.");

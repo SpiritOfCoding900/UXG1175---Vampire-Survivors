@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2247445843036775884}
   - component: {fileID: 4530574541828307771}
   - component: {fileID: 3022448982654593377}
+  - component: {fileID: 3503854105977754735}
   m_Layer: 0
   m_Name: RangedEnemySlowFire
   m_TagString: Enemy
@@ -196,3 +197,26 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   rotationSpeed: 5
   expGained: 100
+  anim: {fileID: 3503854105977754735}
+--- !u!95 &3503854105977754735
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127646999329817212}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 433a6efbe229a0e4eb63b46ccd2b1bdb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

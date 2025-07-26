@@ -9,10 +9,13 @@ public class UIMainMenu : MonoBehaviour
     public Button btnSettings;
     public Button btnQuit;
 
+    ///Animation - Joycelyn
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        btnStart.onClick.AddListener(OnPlayClick);
+        //btnStart.onClick.AddListener(OnPlayClick);
         btnSettings.onClick.AddListener(OnSettingsClick);
         btnQuit.onClick.AddListener(OnQuitClick);
     }
@@ -28,10 +31,14 @@ public class UIMainMenu : MonoBehaviour
         AudioManager.Instance.SFXSound(SoundID.ButtonClick);
         UIManager.Instance.Open(GameUIID.Settings);
     }
-
-    private void OnPlayClick()
+    public void OnClickPlayAnimation()
     {
+        anim.Play("Button_Start_Transit");
         AudioManager.Instance.SFXSound(SoundID.Confirm);
+    }
+
+    public void OnPlayClick()
+    {
         UIManager.Instance.OpenReplace(GameUIID.Title);
     }
 

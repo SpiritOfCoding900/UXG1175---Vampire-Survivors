@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6905257856701845882}
   - component: {fileID: 5798848082866507428}
   - component: {fileID: 7576581117160147901}
+  - component: {fileID: 6245787033946557394}
   m_Layer: 0
   m_Name: MeleeEnemy_Bat
   m_TagString: Enemy
@@ -197,3 +198,26 @@ MonoBehaviour:
   attackRangeIndicator: {fileID: 3322299815010836073, guid: 42076a15a0b5cd44ea8aa943c63ed2a6, type: 3}
   indicatorDisplay: 0.2
   expGained: 10
+  anim: {fileID: 6245787033946557394}
+--- !u!95 &6245787033946557394
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699875814949224106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98f4755bc6c376d4dbb9af778e94109f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

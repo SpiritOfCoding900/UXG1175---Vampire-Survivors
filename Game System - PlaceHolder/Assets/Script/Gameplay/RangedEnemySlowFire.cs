@@ -13,6 +13,8 @@ public class RangedEnemySlowFire : EnemyController
     [Header("Enemy's Current Stats: ")]
     public float expGained = 2f;
 
+    ///Animation - Joycelyn
+    public Animator anim;
     void Awake()
     {
         GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
@@ -35,6 +37,9 @@ public class RangedEnemySlowFire : EnemyController
     // Update is called once per frame
     void Update()
     {
+        ///Idle Animation
+        anim.Play("Enemy_RangedSlow_Idle");
+
         Vector2 lookDirection = (playerTransform.position - transform.position);
         float angle = Mathf.Atan2 (lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
@@ -50,6 +55,9 @@ public class RangedEnemySlowFire : EnemyController
 
     private void ShootBullet()
     {
+        ///Attack Animation
+        anim.Play("Enemy_RangedSlow_Attack");
+
         GameObject newBulletGO = Instantiate (bulletPrefab, firePoint.position, transform.rotation);
         Bullet bullet = newBulletGO.GetComponent<Bullet>();
         Vector2 bulletDirection = transform.right;
@@ -70,6 +78,9 @@ public class RangedEnemySlowFire : EnemyController
     {
         if (baseHealth <= 0)
         {
+            ///Death Animation - Joycelyn
+            anim.Play("Enemy_RangedSlow_Die");
+
             // Give Exp
             PlayerLevelUpStats.Instance.SetExperience(expGained);
             Debug.LogWarning($"{expGained} experience gained from killing {gameObject.name}.");

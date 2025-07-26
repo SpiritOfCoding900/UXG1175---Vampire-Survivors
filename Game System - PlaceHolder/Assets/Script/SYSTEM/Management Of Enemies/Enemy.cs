@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour, IDamagable
     [Header("Loot Table Of Items: ")]
     public List<LootDrop> lootTable;
 
+    ///Animation - Joycelyn
+    public Animator anim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,6 +40,9 @@ public class Enemy : MonoBehaviour, IDamagable
         if (isMoving)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+
+            ///Bat Moves
+            anim.Play("Enemy_Bat_Move");
         }
 
         EnemyDead();
@@ -49,6 +55,9 @@ public class Enemy : MonoBehaviour, IDamagable
 
     public void EnemyDead()
     {
+        ///Bat dies
+        anim.Play("Enemy_Bat_Die");
+
         if (HP <= 0)
         {
             // Give Exp

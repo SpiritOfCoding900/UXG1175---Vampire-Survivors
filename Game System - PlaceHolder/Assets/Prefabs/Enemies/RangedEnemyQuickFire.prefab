@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4110588421864349051}
   - component: {fileID: 6011998902128006223}
   - component: {fileID: 7168800804787211848}
+  - component: {fileID: 2144280259495212746}
   m_Layer: 0
   m_Name: RangedEnemyQuickFire
   m_TagString: Enemy
@@ -199,3 +200,26 @@ MonoBehaviour:
   patrolPointTreshold: 0.5
   rotationSpeed: 1
   expGained: 25
+  anim: {fileID: 2144280259495212746}
+--- !u!95 &2144280259495212746
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363003186764157608}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e2061557a0140b40a3697adc3981054, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

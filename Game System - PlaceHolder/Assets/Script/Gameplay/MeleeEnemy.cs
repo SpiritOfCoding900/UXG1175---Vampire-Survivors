@@ -17,12 +17,20 @@ public class MeleeEnemy : EnemyController
     [Header("Enemy's Current Stats: ")]
     public float expGained = 2f;
 
+    ///Animation - Joycelyn
+    public Animator anim;
+
     void Awake()
     {
         GameObject GO = GameObject.FindGameObjectWithTag("Player");
         playerTransform = GO.transform;
         attackCooldownTimer = 0f;
         rb = GetComponent<Rigidbody2D>();
+
+        ///pls 
+        anim = GetComponent<Animator>();
+        anim.SetBool("Walk", false);
+        anim.SetBool("death", false);
     }
 
     public void Start()
@@ -72,11 +80,27 @@ public class MeleeEnemy : EnemyController
 
         //Chase
         rb.linearVelocity = lookDirection * baseMovementSpeed;
+
+        ///Move the enemy - Joycelyn
+        if(enemyName == "MeleeEnemy_Bat")
+        {
+            anim.Play("Enemy_Bat_Move");        
+        }
+        if(enemyName == "MeleeEnemy")
+        {
+            anim.Play("Enemy_Melee_Move");
+        }
  
     }
 
     private void PerformMeleeAttack()
     {
+        ///Attack Animation - Joycelyn
+        if(enemyName == "MeleeEnemy")
+        {
+            anim.Play("Enemy_Melee_Attack");
+        }
+
         Debug.Log("PerformMelee running");
         Player.Instance.TakeDamage(baseDamageAmount);
         VisualizeAttackRange();
@@ -112,13 +136,26 @@ public class MeleeEnemy : EnemyController
                 }
             }
 
+
             // Stop movement completely
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             if (rb != null)
             {
+                ///ANIMATION - Joycelyn
+                if (enemyName == "MeleeEnemy_Bat")
+                {
+                    anim.Play("Enemy_Bat_Die");
+                }
+                if (enemyName == "MeleeEnemy")
+                {
+                    anim.Play("Enemy_Melee_Die");
+                }
+
                 rb.linearVelocity = Vector2.zero;
                 rb.angularVelocity = 0f;
                 rb.isKinematic = true;
+
+
             }
 
             // Death
