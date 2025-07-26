@@ -26,8 +26,7 @@ public class UIPlayerSelection : MonoBehaviour
     [Header("Character Select")]
     public List<CharacterCardUI> characterCards; // Assign 3 elements in the inspector
 
-    ///test
-    public Animator anim;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
